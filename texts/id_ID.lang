@@ -1,0 +1,39 @@
+// PLAY SCREEN
+servers.third_party=Server Pihak Ke-tiga
+toggle.more_menu.text=Menu Lainnya
+
+// WORLD SETTINGS
+toggle.game_rule.text=Game Rule
+
+neko.c.type_world.gamemode=Mode Permainan :
+neko.c.type_world.personal_gamemode=Mode Permainan Personal :
+neko.c.type_world.world_type=Tipe Dunia :
+neko.c.type_world.difficulty=Kesulitan :
+
+// MAIN SCREEN
+xbox.sign_text_true=Kamu udah login XBOX
+xbox.sign_text_false=Kamu belum login XBOX
+
+// SETTINGS
+
+yuki.general.text=Umum
+
+toggle.graphics.text=Grafis
+toggle.controls_settings.text=Pengaturan Kontrol
+toggle.advanced_settings.text=Pengaturan Lanjutan
+
+yuki.accesbility_and_howtoplay.text=Aksesbilitas & Cara main
+yuki.advanced_settings.text=Pengaturan Lanjutan
+yuki.resource_packs.text=Sumber daya
+
+neko.c.camera_perspective.text=Perspektif Kamera :
+neko.c.ui_profile.text=UI Profile :
+
+// SETTINGS ABOUT UI
+neko.c.note.title=Catatan :
+neko.c.rule_1=[ 1 ]. §fDilarang memodifikasi NekoUI ( Kecuali untuk penggunaan pribadi )
+neko.c.rule_2=[ 2 ]. §fDilarang re-upload link NekoUI
+neko.c.rule_3=[ 3 ]. §fNemu bug ? report ke Creator ya :D
+neko.c.rule_4=[ 4 ]. §fJika ingin review NekoUI ke YouTube, tulis nama creator di deskripsi video
+neko.c.rule_5=[ 5 ]. §fDilarang mengambil / menggunakan file JSON NekoUI tanpa IZIN!
+

@@ -1,0 +1,64 @@
+//[C] Don't change this code
+{
+  "namespace": "bg_animations", 
+
+
+  "nomoreanim": {
+    "type": "image",
+    "fill": true, 
+    "bilinear": true,
+    "texture": "ui/neko/uwu/bg_main"
+  },
+  
+  "bg_play": {
+    "type": "image",
+    "fill": true, 
+    "bilinear": true,
+    "texture": "ui/neko/uwu/bg_play"
+  },
+  
+  
+  /*///// ANIMATION TEMPLATE /////*/
+  "anim_base": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": "$duration_per_frame",
+    "activated": true,
+    "from": "$anm_offset",
+    "to": "$anm_offset"
+  }, 
+  
+  /*///// CONTENT /////*/
+  "img": {
+    "type": "image", 
+    "fill": true, 
+    "size": [ "100%", "100%" ], 
+    "texture": "('textures/neko/bg_loading_screen/' + $img)"
+  }, 
+  
+  /*///// STACK PANEL /////*/
+  "bg_anim": {
+    "type": "stack_panel", 
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_left", 
+    "anchor_to": "top_left", 
+    "offset": "@bg_animations.01",
+    "$duration_per_frame|default": 2,
+    "controls": [
+      { "i02@bg_animations.img": { "$img": "pict_2" } },
+      { "i03@bg_animations.img": { "$img": "pict_3" } },
+      { "i04@bg_animations.img": { "$img": "pict_4" } },
+      { "i05@bg_animations.img": { "$img": "pict_5" } },
+      { "i06@bg_animations.img": { "$img": "pict_6" } },
+      { "i07@bg_animations.img": { "$img": "pict_7" } }
+    ]
+  }, 
+  
+  /*///// FRAMES /////*/
+  "01@bg_animations.anim_base":{"$anm_offset": [ 0, " 0% " ],"next": "@bg_animations.02"},
+  "02@bg_animations.anim_base":{"$anm_offset": [ 0, " -100% " ],"next": "@bg_animations.03"},
+  "03@bg_animations.anim_base":{"$anm_offset": [ 0, " -200% " ],"next": "@bg_animations.04"},
+  "04@bg_animations.anim_base":{"$anm_offset": [ 0, " -300% " ],"next": "@bg_animations.05"},
+  "05@bg_animations.anim_base":{"$anm_offset": [ 0, " -400% " ],"next": "@bg_animations.06"},
+  "06@bg_animations.anim_base":{"$anm_offset": [ 0, " -500% " ],"next": "@bg_animations.01"}
+}

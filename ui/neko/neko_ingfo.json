@@ -1,0 +1,171 @@
+{
+  "namespace": "loli",
+
+  "button_panel": {
+  "type": "panel",
+  "layer": 5,
+  "size": [ "fill" , "100%" ]
+  },
+
+  "panel_nama_pict": {
+  "type": "panel",
+  "layer": 5,
+  "size": [ 
+     23 , 
+     "100%" 
+    ]
+  },
+
+  "profile_label": {
+  "type": "label",
+  "anchor_from": "middle_left",
+  "anchor_to": "middle_left",
+  "text_alignment": "left",
+  "font_type": "smooth",
+  "size": [ "100% - 5px ", "default" ],
+  "max_size": [ "100% - 5px ", "15px" ],
+  "color": "white"
+},
+
+  "playername_header_text@loli.profile_label": {
+  "layer": 5,
+  "font_scale_factor": 0.7,
+  "text": "Gamertag :"
+  },
+ 
+  "playername@loli.profile_label": {
+  "layer": 5,
+  "font_scale_factor": 0.75,
+  "font_type": "MinecraftTen",
+  "text": "#playername",
+  "bindings": [
+      {
+        "binding_name": "#playername"
+      }
+    ]
+  },
+
+  "gamerpic": {
+  "type": "image",
+  "size": [ 15 , 15 ],
+  "bindings": [
+        {
+          "binding_name": "#gamerpic_texture_path",
+          "binding_name_override": "#texture"
+        },
+     {
+        "binding_name": "#gamerpic_texture_location_type",
+        "binding_name_override": "#texture_file_system"
+      }
+    ]
+  },
+
+  "stack_player_name_label": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "orientation": "vertical",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+        {
+          "playername@loli.playername": {
+        }
+      }
+    ]
+  },
+
+  "gamertag_panel": {
+    "type": "panel",
+    "alpha": 1,
+    "min_size": [ "15%" , 27 ],
+    "max_size": [ "17%" , 27 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "nametag_stackpanel": {
+          "type": "stack_panel",
+          "size": [ "100%" , "100%" ],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "panel_nama_pict@loli.panel_nama_pict": { "controls": [ { "gamerpic@loli.gamerpic": {}}]}
+            },
+            {
+              "spacer_2": {
+                "type": "panel",
+                "size": [ 5, 5]
+              }
+            },
+            {
+              "button_panel@loli.button_panel": { "controls": [ { "stack_player_name_label@loli.stack_player_name_label": {}}]}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+    /*
+    +-------------------------------------------------------------------+
+    +--                                                               --+
+    --+                 V E R S I - M I N E C R A F T                   +--       [JAMAN SEKARANG VS JAMAN DULU]
+    +--                                                               --+
+    +-------------------------------------------------------------------+
+    */
+
+    "label": {
+      "type": "label",
+      "shadow": false,
+      "font_size": "small",
+      "size": [ "default", "default" ],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",    
+      "text_alignment": "left",
+      "layer": 5
+    },
+
+    "copyright@loli.label": {
+    "layer": 5,
+    "text": "menu.copyright"
+    },
+   
+    "version@loli.label": {
+    "layer": 5,
+    "text": "#version",
+    "bindings": [
+        {
+         "binding_name": "#version"
+        }
+      ]
+    },
+
+    "stack_panel_label": {
+      "type": "stack_panel",
+      "size": [ "100%c", "100%c" ],
+      "orientation": "vertical",
+      "anchor_from": "bottom_left",
+      "anchor_to": "bottom_left",
+      "controls": [
+        {
+          "version@loli.version": {}
+        },
+        {
+          "copyright@loli.copyright": {}
+        }
+      ]
+    },
+
+  "minecraft_version": {
+    "type": "panel",
+    "size": [ "100%c", "100%c" ],
+    "layer": 5,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+        {
+          "stack_panel_label@loli.stack_panel_label": {}
+        }
+      ]
+    }
+  }

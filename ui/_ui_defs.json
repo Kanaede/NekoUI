@@ -1,0 +1,27 @@
+{
+  // Alphabetical order please :)
+  "ui_defs": [
+
+    // C u s t o m
+
+    "ui/neko/neko_c.json",
+    "ui/neko/bg_animations.json",
+    "ui/neko/neko_custom_radio_settings.json",
+    "ui/neko/neko_main_screen.json",
+    "ui/neko/neko_ingfo.json",
+    "ui/neko/neko_anim.json",
+    "ui/neko/test_toggle.json",
+
+    // Pengaturan
+    "ui/neko/neko_settings_common.json",
+    "ui/neko/neko_settings_section.json",
+
+    // Play_screen
+    "ui/neko/anim_bg.json",
+    "ui/neko/neko_play_screen.json",
+    "ui/neko/neko_template_tabs.json",
+    "ui/neko/button_panel.json",
+    "ui/neko/neko_button.json",
+    "ui/neko/button.json"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "namespace": "furnace",
+
+  "furnace_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "tombol_extra_3@crafting.tombol_extra_3": {}}
+      }
+    ]
+  }
+}

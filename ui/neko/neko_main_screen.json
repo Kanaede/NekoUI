@@ -1,0 +1,446 @@
+{
+  "namespace": "uwu",
+
+  "xbox_panel_a@neko_c.bg_3": {
+    "color": [ 0.04, 0.05, 0.07 ],
+    "alpha": 1,
+    "size": [ "100%" , "100%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      {
+        "xbox_sign_in": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%" , "100%" ],
+          "controls": [
+            {
+              "spasi": {
+                "type": "panel",
+                "size": [ 3, 3 ]
+              }
+            },
+            {
+              "panel_img": {
+                "type": "panel",
+                "size": [ 12 , "100%" ],
+                "controls": [
+                  {
+                    "image": {
+                      "type": "image",
+                      "layer": 11,
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": [ 10, 10 ],
+                      "texture": "textures/neko/main_icon/xbox_a"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spasi": {
+                "type": "panel",
+                "size": [ 5, 5 ]
+              }
+            },
+            {
+              "panel_text": {
+                "type": "panel",
+                "size": [ "100%" , "100%" ],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 11,
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "text_alignment": "left",
+                      "font_scale_factor": 0.65,
+                      "max_size": [ "100% - 20px", "25px" ],
+                      "color": "white",
+                      "text": "xbox.sign_text_true"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "xbox_panel_b@neko_c.bg_3": {
+    "color": [ 0.04, 0.05, 0.07 ],
+    "alpha": 1,
+    "size": [ "100%" , "100%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      {
+        "xbox_sign_in": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%" , "100%" ],
+          "controls": [
+            {
+              "panel_img": {
+                "type": "panel",
+                "size": [ 12 , "100%" ],
+                "controls": [
+                  {
+                    "spasi": {
+                      "type": "panel",
+                      "size": [ 3, 3 ]
+                    }
+                  },
+                  {
+                    "panel_img": {
+                      "type": "panel",
+                      "size": [ 12 , "100%" ],
+                      "controls": [
+                        {
+                          "image": {
+                            "type": "image",
+                            "layer": 11,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ 10, 10 ],
+                            "texture": "textures/neko/main_icon/xbox_b"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spasi": {
+                "type": "panel",
+                "size": [ 5, 5 ]
+              }
+            },
+            {
+              "panel_text": {
+                "type": "panel",
+                "size": [ "100%" , "100%" ],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 11,
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "text_alignment": "left",
+                      "font_scale_factor": 0.65,
+                      "max_size": [ "100% - 20px", "25px" ],
+                      "color": [ 1.00, 0.24, 0.26 ],
+                      "text": "xbox.sign_text_false"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_panel_uwu": {
+    "type": "panel",
+    "size": "$rem",
+    "$rem|default": [ "100%", "29px" ],
+    "variables": [
+      {
+        "requires": "$win10_edition",
+        "$rem": [ "100%", "25px" ]
+      }
+    ]
+  },
+
+  "button_panel_uwu_2": {
+    "type": "panel",
+    "size": [ "100%", "30px" ]
+  },
+
+  "left_middle_button": {
+    "type": "panel",
+
+    "offset": "$venti",
+    "$venti|default": [ 7, 0 ],
+    "variables": [
+      {
+        "requires": "$win10_edition",
+        "$venti": [ 5, 0 ]
+      }
+    ],
+
+    "size": [ 90, "100% - 30px" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+
+    "controls": [
+      {
+        "left_uwu": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@anim_test.screen_exit_animation_push_offset",
+            "@anim_test.screen_exit_animation_pop_offset",
+            "@anim_test.screen_entrance_animation_push_offset",
+            "@anim_test.screen_entrance_animation_pop_offset"
+          ],
+          "controls": [
+            { "button_panel_uwu@uwu.button_panel_uwu_2": {"controls": [ { "start_button@zxyn.start_button": {}}]}},
+            { "button_panel_uwu@uwu.button_panel_uwu": {"controls": [ { "achievements_button_2@zxyn.achievements_button_2": {}}]}},
+            { "button_panel_uwu@uwu.button_panel_uwu": {"controls": [ { "profile_button@zxyn.profile_button": {}}]}},
+            { "button_panel_uwu@uwu.button_panel_uwu": {"controls": [ { "store_button_2@zxyn.store_button_2": {}}]}},
+            { "button_panel_uwu@uwu.button_panel_uwu": {"controls": [ { "settings_button_2@zxyn.settings_button_2": {}}]}}
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_panel": {
+    "type": "panel",
+    "size": [ "fill" , 30 ]
+  },
+
+  "checked": {
+    "type": "image",
+    "size": [ 9, 9 ],
+    "texture": "textures/neko/menu"
+  },
+
+  "button_content_panel": {
+    "type": "panel",
+    "size": [ "fill" , "100%" ]
+  },
+
+  "main_ui": {
+    "type": "panel",
+    "controls": [
+      {
+        "gamertag_panel": {
+          "type": "panel",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@anim_test.screen_exit_animation_push_offset",
+            "@anim_test.screen_exit_animation_pop_offset",
+            "@anim_test.screen_entrance_animation_push_offset",
+            "@anim_test.screen_entrance_animation_pop_offset"
+          ],
+          "controls": [
+            {
+              "gamertag_panel@loli.gamertag_panel": {}
+            }
+          ]
+        }
+      },
+      {
+        "all_bottom_panel": {
+          "type": "panel",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@anim_test.screen_exit_animation_push_offset_4",
+            "@anim_test.screen_exit_animation_pop_offset_4",
+            "@anim_test.screen_entrance_animation_push_offset_4",
+            "@anim_test.screen_entrance_animation_pop_offset_4"
+          ],
+          "controls": [
+            {
+              "top_middle_button": {
+                "type": "panel",
+                "size": [ "100%c + 10px", 20 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "controls": [
+                  {
+                    "best_fl": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%c" , "100%" ], // x ( 100%c the size in the amount with how much childern )
+                      "controls": [
+                        {
+                          "quit_button@zxyn.quit_button": { "ignored": "$win10_edition" }
+                        },
+                        {
+                          "invite_button@zxyn.invite_button": { "bindings": [{ "binding_name": "#feedback_visible", "binding_name_override": "#visible" }]}
+                        },
+                        {
+                          "feedback_button@zxyn.feedback_button": { "bindings": [{ "binding_name": "#feedback_visible", "binding_name_override": "#visible" }]}
+                        },
+                        {
+                          "login_xbox@zxyn.login_xbox": { "bindings": [{ "binding_name": "#sign_in_visible", "binding_name_override": "#visible" }]}
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "left_panel": {
+                "type": "panel",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [ -10 , 0 ],
+                "size": [ 115 , "100%" ],
+                "controls": [
+                  {
+                    "left_stack": {
+                      "type": "stack_panel",
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "orientation": "vertical",
+                      "size": [ "100%", "100%c" ],
+                      "controls": [
+                          {
+                            "button_content_panel@uwu.button_content_panel": {
+                              "size": [ "100%", 20 ],
+                              "controls": [
+                                {
+                                  "xbox_panel_a@uwu.xbox_panel_a": {}
+                                }
+                              ],
+                              "bindings": [
+                                {
+                                  "binding_name": "#feedback_visible",
+                                  "binding_name_override": "#visible" 
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "button_content_panel@uwu.button_content_panel": {
+                              "size": [ "100%", 20 ],
+                              "controls": [
+                                {
+                                  "xbox_panel_b@uwu.xbox_panel_b": {}
+                                }
+                              ],
+                              "bindings": [
+                                {
+                                  "binding_name": "#sign_in_visible",
+                                  "binding_name_override": "#visible" 
+                                }
+                              ]
+                            }
+                          }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+              {
+                "bottom": {
+                  "type": "panel",
+                  "size": [ "100%", 25 ],
+                  "anchor_from": "bottom_left",
+                  "anchor_to": "bottom_left",
+                  "controls": [
+                    {
+                      "bottom_button": {
+                        "type": "stack_panel",
+                        "orientation": "horizontal",
+                        "size": [ "100%", "100%" ],
+                        "controls": [
+                          {
+                            "left_button_panel": {
+                        "size": [ "100%", "100%" ],
+                        "type": "panel",
+                              "controls": [
+                                {
+                                  "left": {
+                                    "type": "stack_panel",
+                        "size": [ "100%", "100%" ],
+                        "orientation": "horizontal",
+                                    "anchor_from": "top_right",
+                                    "anchor_to": "top_right",
+                                    "controls": [
+                                      {
+                                        "spasi": {
+                                          "type": "panel",
+                                          "size": [ 5, 5 ]
+                                        }
+                                      },
+                                      {
+                                        "button_content_panel@uwu.button_content_panel": {
+                                          "size": [ "100%c", "100%" ],
+                                          "controls": [
+                                            {
+                                              "minecraft_version@loli.minecraft_version": {}
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "button_content_panel@uwu.button_content_panel": {
+                                          "size": [ "100%c", "100%" ],
+                                          "controls": [
+                                            {
+                                              "label": {
+                                                "type": "label",
+                                                "layer": 11,
+                                                "anchor_from": "left_middle",
+                                                "anchor_to": "left_middle",
+                                                "text_alignment": "left",
+                                                "font_size": "small",
+                                                "text": "NekoUI\nCreated By FarhanX"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "skin_panel": {
+    "layer": 5,
+    "type": "panel",
+    "anchor_to": "middle",
+    "anchor_from": "middle",
+    "size": [ "50% + 17px" , "50% + 17px" ],
+    "offset": [ 0 , 3 ],
+    "controls": [
+      { "viewer_panel@start.skin_viewer_panel": {} }
+    ]
+  },
+
+  "semua_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_ui@uwu.main_ui": {}
+      },
+      {
+        "top_middle_button@uwu.top_middle_button": {}
+      },
+      { "skin_panel@uwu.skin_panel": {}},
+      { "left_middle_button@uwu.left_middle_button": {}}
+    ]
+  }
+}

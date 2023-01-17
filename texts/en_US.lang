@@ -1,0 +1,39 @@
+// PLAY SCREEN
+servers.third_party=Third Party Servers
+toggle.more_menu.text=More Menu
+
+// WORLD SETTINGS
+toggle.game_rule.text=Game Rule
+
+neko.c.type_world.gamemode=Gamemode :
+neko.c.type_world.personal_gamemode=Personal Gamemode :
+neko.c.type_world.world_type=World Type :
+neko.c.type_world.difficulty=Difficulty :
+
+// MAIN SCREEN
+xbox.sign_text_true=You are already logged in to xbox
+xbox.sign_text_false=You are not logged in to xbox
+
+// SETTINGS
+
+yuki.general.text=General
+
+toggle.graphics.text=Graphics
+toggle.controls_settings.text=Controls Settings
+toggle.advanced_settings.text=Advanced Settings
+
+yuki.accesbility_and_howtoplay.text=Accessibility & How To Play
+yuki.advanced_settings.text=Advanced Settings
+yuki.resource_packs.text=Resource Packs
+
+neko.c.camera_perspective.text=Camera Perspective :
+neko.c.ui_profile.text=UI Profile :
+
+// SETTINGS ABOUT UI
+neko.c.note.title=NOTE :
+neko.c.rule_1=[ 1 ]. §fDo not modify NekoUI (Except for personal use)
+neko.c.rule_2=[ 2 ]. §fDo not re-upload the NekoUI link
+neko.c.rule_3=[ 3 ]. §fIf find BUG / ERROR in NekoUI report to Creator
+neko.c.rule_4=[ 4 ]. §fIf you want to review NekoUI, go to YouTube. Create NekoUI creator name in Video Description
+neko.c.rule_5=[ 5 ]. §fDo not steal or use NekoUI JSON files without Permission!
+

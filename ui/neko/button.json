@@ -1,0 +1,101 @@
+//File made by @Farhan and @RakaGIT.
+//[C] Don't change this code
+
+{
+  "namespace": "x_button",
+
+  "create_new_button_panel@common_buttons.new_ui_binding_button_label": {
+    "layer": 10,
+    "$anchor|default": "middle",
+    "font_type": "MinecraftTen",
+    "font_scale_factor": 1.1,
+    "offset": [ 0 , -1.1 ] //  X , Y
+  },
+
+  ///////////////////////////////////////////////////
+  // Custom Pause Button
+  ///////////////////////////////////////////////////
+
+  "custom_pause_button@common_buttons.light_text_button": {
+    "size": [ "100%", "100%" ],
+    "$default_button_texture|default": "textures/neko/borderless/core/button_borderless_light",
+    "$hover_button_texture|default": "textures/neko/borderless/core/button_borderless_lighthover",
+    "$pressed_button_texture|default": "textures/neko/borderless/core/button_borderless_lightpressed",
+    "$locked_button_texture|default": "",
+    "$button_type_panel": "x_button_panel.pause_screen_panel",
+    "$border_visible": false,
+    "$warna_icon_default": [ 1.0, 1.0, 1.0 ],
+    "$warna_icon_saatdihover": [ 1.0, 1.0, 1.0 ],
+    "$warna_icon_saatditekan": [ 1.0, 1.0, 1.0  ],
+    "$warna_icon_saatdikunci": [ 1.00, 0.11, 0.11 ],
+    
+    "$default_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$hover_text_color|default": [ 0.53, 0.84, 1.00 ],
+    "$pressed_text_color|default": [ 0.72, 0.90, 1.00 ],
+    "$locked_text_color|default": [ 1.00, 0.11, 0.11 ]
+  },  
+
+  "store_button@x_button.custom_pause_button": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/neko/main_icon/store_icon",
+    "$pressed_button_name": "button.menu_store",
+    "$button_text": "$store_button_text"
+  },
+
+  "invite_players_button@x_button.custom_pause_button": {
+    "$glyph_size": [ 17, 17 ],
+    "$glyph_texture": "textures/neko/main_icon/invite_pause",
+    "$pressed_button_name": "button.menu_invite_players",
+    "focus_change_down": "FOCUS_OVERRIDE_STOP",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+    "$button_text": "pauseScreen.invite",
+    "bindings": [
+      {
+        "binding_name": "#invite_button_visible",
+        "binding_name_override": "#enabled",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#invite_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+   "achievements_button_pause@x_button.custom_pause_button": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/neko/main_icon/pause_achievements",
+    "$pressed_button_name": "button.menu_achievements",
+    "$button_text": "menu.achievements"
+  },
+
+  "profile_button_pause@x_button.custom_pause_button": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/neko/main_icon/profile_icon",
+    "$pressed_button_name": "button.to_profile_or_skins_screen",
+    "$button_text": "profileScreen.header"
+  },
+
+  "screenshot_pause@x_button.custom_pause_button": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/ui/camera-yo",
+    "$pressed_button_name": "button.screenshot",
+    "$button_text": "Screenshot"
+  },
+  
+  "pause_button_template@common_buttons.light_text_button": {
+    "size": [ "100% - 5px", "50%" ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "$glyph_size": [ 50, 50 ],
+    "$border_visible": false,
+    "$button_type_panel": "x_button_panel.pause_button_panel",
+    "$default_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$hover_text_color|default": [ 0.81, 0.98, 1.00 ],
+    "$pressed_text_color|default": [ 0.00, 0.82, 0.92 ],
+    "$locked_text_color|default": [ 1.00, 0.11, 0.11 ],
+    "$default_button_texture|default": "",
+    "$hover_button_texture|default": "",
+    "$pressed_button_texture|default": "textures/neko/borderless/core/button_borderless_lightpressed"
+  }
+}
