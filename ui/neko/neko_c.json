@@ -315,13 +315,13 @@
     "controls": [
         { "version@neko_c.about_label": { "text": "Creator :"}},
         { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-        { "version@neko_c.about_label_title": { "text": "Farhan" , "font_size": "large"}},
+        { "version@neko_c.about_label_title": { "text": "Farhan and RakaGIT" , "font_size": "large"}},
         { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-        { "version@neko_c.about_label": { "text": "[ + ] Discord : §fZxyn404#2753"}},
+        { "version@neko_c.about_label": { "text": "[ + ] Farhan Discord : §fZxyn404#2753"}},
         { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-        { "version@neko_c.about_label": { "text": "[ + ] Instagram : §f@zxyn404 ( Yuki )"}},
+        { "version@neko_c.about_label": { "text": "[ + ] Farhan Instagram : §f@zxyn404 ( Yuki )"}},
         { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-        { "version@neko_c.about_label": { "text": "[ + ] Twitter : §f@zxyn404 ( Zxyn )"}},
+        { "version@neko_c.about_label": { "text": "[ + ] Farhan Twitter : §f@zxyn404 ( Zxyn )"}},
 
         { "panel": { "type": "panel", "size": [ 5 , 5 ] }},
 
