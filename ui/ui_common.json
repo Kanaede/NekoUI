@@ -555,7 +555,7 @@
       },
       {
         "from_button_id": "button.menu_select",
-        "to_button_id": "button.container_auto_place", // Changed when double click it will automatically auto place
+        "to_button_id": "button.container_auto_place" // Changed when double click it will automatically auto place
       },
       {
         "from_button_id": "button.menu_ok",
