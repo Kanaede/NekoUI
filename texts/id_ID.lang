@@ -1,9 +1,36 @@
+// HUD //
+map.position=§bX:§f %s, §bY:§f %s, §bZ:§f %s
+
+// Main UI
+zxyn_main.ui.play=MAIN
+zxyn_main.ui.marketplace=MARKETPLACE
+zxyn_main.ui.dressingroom=RUANG GANTI
+zxyn_main.ui.achievements=PENCAPAIAN
+zxyn_main.ui.settings=PENGATURAN
+
+zxyn_main.ui_signin=Login Ke Xbox
+zxyn_main.ui.feedback=Umpan Balik
+zxyn_main.ui.invite_notifications=NOTIFIKASI UNDANGAN 
+zxyn_main.ui.quit=Quit
+
+// PAUSE
+zxyn_pause.ui.invite_to_game=Invite Ke Permainan
+zxyn_pause.ui.screenshot=Screenshots
+zxyn_pause.ui.title_pause=Pause
+
+// CHAT
+zxyn_chat.ui.previous=Sebelumnya
+zxyn_chat.ui.next=Selanjutnya
+zxyn_chat.ui.skip=Auto Complete
+zxyn_chat.ui.mute_all=Mute Chat
+
 // PLAY SCREEN
 servers.third_party=Server Pihak Ke-tiga
-toggle.more_menu.text=Menu Lainnya
+playscreen.create_new_world=Buat Dunia baru
+createWorldScreen.experimtalSettings=Pengaturan Experimental
 
 // WORLD SETTINGS
-toggle.game_rule.text=Game Rule
+toggle.game_rule.text=Pengaturan Lanjutan
 
 neko.c.type_world.gamemode=Mode Permainan :
 neko.c.type_world.personal_gamemode=Mode Permainan Personal :
@@ -11,18 +38,38 @@ neko.c.type_world.world_type=Tipe Dunia :
 neko.c.type_world.difficulty=Kesulitan :
 
 // MAIN SCREEN
-xbox.sign_text_true=Kamu udah login XBOX
-xbox.sign_text_false=Kamu belum login XBOX
+menu.neko_quit_button=Keluar
+xbox.sign_text_true=KAMU SUDAH LOGIN XBOX
+xbox.sign_text_false=KAMU BELUM LOGIN XBOX
 
 // SETTINGS
 
-yuki.general.text=Umum
+world_settings.header.game_settings=Pengaturan Dunia
 
+settings.header.account= Akun
+settings.header.quick_settings=Pengaturan Cepat
+settings.header.graphics_and_gameplay=Grafis & Gameplay
+settings.header.controls_settings=Pengaturan Kontrol
+
+settings.header.graphics.text=Grafis
+settings.header.gameplay.text=Gameplay
+settings.header.video.text=Video
+settings.header.quick_settings.text=Pengaturan Cepat
+settings.header.keyboard_and_mouse.text=Keyboard & Mouse
+settings.header.controller.text=Pengontrol
+settings.header.touch.text=Sentuh / Sepuh
+settings.header.creator.text=Kreator
+settings.header.audio.text=Audio
+settings.header.language.text=Bahasa
+settings.header.account_section=Akun
+settings.header.accessibility_section=Aksesibilitas
+settings.header.general_tab_section=Umum
+
+yuki.general.text=Umum
 toggle.graphics.text=Grafis
 toggle.controls_settings.text=Pengaturan Kontrol
 toggle.advanced_settings.text=Pengaturan Lanjutan
 
-yuki.accesbility_and_howtoplay.text=Aksesbilitas & Cara main
 yuki.advanced_settings.text=Pengaturan Lanjutan
 yuki.resource_packs.text=Sumber daya
 
@@ -30,10 +77,14 @@ neko.c.camera_perspective.text=Perspektif Kamera :
 neko.c.ui_profile.text=UI Profile :
 
 // SETTINGS ABOUT UI
-neko.c.note.title=Catatan :
-neko.c.rule_1=[ 1 ]. §fDilarang memodifikasi NekoUI ( Kecuali untuk penggunaan pribadi )
-neko.c.rule_2=[ 2 ]. §fDilarang re-upload link NekoUI
-neko.c.rule_3=[ 3 ]. §fNemu bug ? report ke Creator ya :D
-neko.c.rule_4=[ 4 ]. §fJika ingin review NekoUI ke YouTube, tulis nama creator di deskripsi video
-neko.c.rule_5=[ 5 ]. §fDilarang mengambil / menggunakan file JSON NekoUI tanpa IZIN!
+zxyn.ui.verison=Versi NekoUI [ ID ]:
+zxyn.ui.build=NekoUI Build:
+zxyn.ui.latestupdate=Tarakhir di update:
+zxyn.ui.mcsupport=NekoUI mendukung Versi Minecraft:
 
+neko.c.note.title=Catatan :
+neko.c.rule_1=Dilarang memodifikasi NekoUI ( Kecuali untuk penggunaan pribadi )
+neko.c.rule_2=Dilarang mengganti Link download NekoUI!
+neko.c.rule_3=Nemu bug? report ke creator
+neko.c.rule_4=Dilarang menggunakan file JSON NekoUI tanpa IZIN dari Kreator!
+neko.c.rule_5=Link Download untuk NekoUI Hanya tersedia di Mediafire!

@@ -10,20 +10,28 @@
       },
       {
         "font_format": "ttf",
-        "font_name": "AGENCYB",
+        "font_name": "bahnschrift_bold",
         "font_scale_factor": 1,
         "version": 1,
-        "font_file": "font/AGENCYB",
+        "font_file": "font/bahnschrift_bold",
         "lowPerformanceCompatible": true
       },
       {
-      "font_format": "ttf",
-      "font_name": "eudoxus",
-      "font_scale_factor": 1,
-      "version": 1,
-      "font_file": "font/EudoxusSans-Bold",
-      "lowPerformanceCompatible": false
-    },
+        "font_format": "ttf",
+        "font_name": "bahnschrift_semi_bold",
+        "font_scale_factor": 1,
+        "version": 1,
+        "font_file": "font/bahnschrift_semi_bold",
+        "lowPerformanceCompatible": true
+      },
+      {
+        "font_format": "ttf",
+        "font_name": "PoppinsMedium",
+        "font_scale_factor": 1,
+        "version": 1,
+        "font_file": "font/Poppins-Medium",
+        "lowPerformanceCompatible": true
+      },
       {
         "font_format": "ttf",
         "font_name": "segoeuib",

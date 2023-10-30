@@ -1,39 +1,96 @@
+// HUD //
+map.position=§bX:§f %s, §bY:§f %s, §bZ:§f %s
+
+// Main UI
+zxyn_main.ui.play=PLAY
+zxyn_main.ui.marketplace=MARKETPLACE
+zxyn_main.ui.dressingroom=DRESSING ROOM
+zxyn_main.ui.achievements=ACHIEVEMENTS
+zxyn_main.ui.settings=SETTINGS
+
+zxyn_main.ui_signin=Sign-in to Xbox
+zxyn_main.ui.feedback=Feedback
+zxyn_main.ui.invite_notifications=INVITE NOTIFICATIONS
+zxyn_main.ui.quit=Quit
+
+// PAUSE
+zxyn_pause.ui.invite_to_game=Invite To Game
+zxyn_pause.ui.screenshot=Screenshot
+zxyn_pause.ui.title_pause=Pause
+
+// CHAT
+zxyn_chat.ui.previous=Previous
+zxyn_chat.ui.next=Next
+zxyn_chat.ui.skip=Auto Complete
+zxyn_chat.ui.mute_all=Mute All
+
 // PLAY SCREEN
+zxyn_ui.play.add_servers_3rd=Add Servers
+zxyn_ui.play.import_world=Import World
+
 servers.third_party=Third Party Servers
-toggle.more_menu.text=More Menu
+playscreen.create_new_world=Create New Worlds
+createWorldScreen.experimtalSettings=Experimental Settings
 
 // WORLD SETTINGS
-toggle.game_rule.text=Game Rule
+toggle.game_rule.text=Advanced Settings
 
-neko.c.type_world.gamemode=Gamemode :
-neko.c.type_world.personal_gamemode=Personal Gamemode :
-neko.c.type_world.world_type=World Type :
-neko.c.type_world.difficulty=Difficulty :
+neko.c.type_world.gamemode=Game Mode:
+neko.c.type_world.personal_gamemode=Personal Game Mode:
+neko.c.type_world.world_type=World Type:
+neko.c.type_world.difficulty=Difficulty:
 
 // MAIN SCREEN
-xbox.sign_text_true=You are already logged in to xbox
-xbox.sign_text_false=You are not logged in to xbox
+menu.neko_quit_button=Exit
+xbox.sign_text_true=XBOX: YES
+xbox.sign_text_false=XBOX: NO
 
 // SETTINGS
 
-yuki.general.text=General
+world_settings.header.game_settings=World Settings
 
+settings.header.account=Account
+settings.header.quick_settings=Quick Settings
+settings.header.graphics_and_gameplay=Graphics & Gameplay
+settings.header.controls_settings=Control Settings
+
+settings.header.graphics.text=Graphics
+settings.header.gameplay.text=Gameplay
+settings.header.video.text=Video
+settings.header.quick_settings.text=Quick Settings
+settings.header.keyboard_and_mouse.text=Keyboard & Mouse
+settings.header.controller.text=Controller
+settings.header.touch.text=Touch
+settings.header.creator.text=Creator
+settings.header.audio.text=Audio
+settings.header.language.text=Language
+settings.header.account_section=Account
+settings.header.accessibility_section=Accessibility
+settings.header.general_tab_section=General
+
+yuki.general.text=General
 toggle.graphics.text=Graphics
 toggle.controls_settings.text=Controls Settings
 toggle.advanced_settings.text=Advanced Settings
 
-yuki.accesbility_and_howtoplay.text=Accessibility & How To Play
 yuki.advanced_settings.text=Advanced Settings
 yuki.resource_packs.text=Resource Packs
 
-neko.c.camera_perspective.text=Camera Perspective :
-neko.c.ui_profile.text=UI Profile :
+neko.c.camera_perspective.text=Perspective Camera:
+neko.c.ui_profile.text=UI Profile:
+
+neko.c.about.text=About
+neko.c.about_zxyn.text=About NekoUI
 
 // SETTINGS ABOUT UI
-neko.c.note.title=NOTE :
-neko.c.rule_1=[ 1 ]. §fDo not modify NekoUI (Except for personal use)
-neko.c.rule_2=[ 2 ]. §fDo not re-upload the NekoUI link
-neko.c.rule_3=[ 3 ]. §fIf find BUG / ERROR in NekoUI report to Creator
-neko.c.rule_4=[ 4 ]. §fIf you want to review NekoUI, go to YouTube. Create NekoUI creator name in Video Description
-neko.c.rule_5=[ 5 ]. §fDo not steal or use NekoUI JSON files without Permission!
+zxyn.ui.verison=NekoUI Versions:
+zxyn.ui.build=NekoUI Build:
+zxyn.ui.latestupdate=Latest Update:
+zxyn.ui.mcsupport=NekoUI supported Minecraft Version:
 
+neko.c.note.title=Catatan :
+neko.c.rule_1=Dilarang memodifikasi NekoUI ( Kecuali untuk penggunaan pribadi )
+neko.c.rule_2=Dilarang mengganti Link download NekoUI!
+neko.c.rule_3=Nemu bug? report ke creator
+neko.c.rule_4=Dilarang menggunakan file JSON NekoUI tanpa IZIN dari Kreator!
+neko.c.rule_5=Link Download untuk NekoUI Hanya tersedia di Mediafire!

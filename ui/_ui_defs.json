@@ -2,26 +2,39 @@
   // Alphabetical order please :)
   "ui_defs": [
 
-    // C u s t o m
+    // A CUSTOM
 
-    "ui/neko/neko_c.json",
-    "ui/neko/bg_animations.json",
-    "ui/neko/neko_custom_radio_settings.json",
-    "ui/neko/neko_main_screen.json",
-    "ui/neko/neko_ingfo.json",
-    "ui/neko/neko_anim.json",
-    "ui/neko/test_toggle.json",
+    "zxyn-core/mainui/zxyn_main_ui.json",
+    "zxyn-core/mainui/zxyn_main_ui_core.json",
+    "zxyn-core/mainui/zxyn_ui_new.json",
+    
+    "zxyn-core/hud/zxyn_hud.json",
+    "zxyn-core/hud/main_hand_slot.json",
+
+    "zxyn-core/zxyn_loading_background.json",
+
+    // C u $ T o M J s O ? 1.0
+
+    "zxyn-core/neko_common.json",
+    "zxyn-core/neko_background.json",
+    "zxyn-core/zxyn_information.json",
+    "zxyn-core/neko_animation.json",
+    "zxyn-core/neko_toggle.json",
 
     // Pengaturan
-    "ui/neko/neko_settings_common.json",
-    "ui/neko/neko_settings_section.json",
+    "zxyn-core/settings/neko_settings_common.json",
+    "zxyn-core/settings/neko_settings_section.json",
+    "zxyn-core/settings/neko_custom_radio_settings.json",
 
     // Play_screen
-    "ui/neko/anim_bg.json",
-    "ui/neko/neko_play_screen.json",
-    "ui/neko/neko_template_tabs.json",
-    "ui/neko/button_panel.json",
-    "ui/neko/neko_button.json",
-    "ui/neko/button.json"
+    "zxyn-core/neko_play_screen.json",
+    "zxyn-core/neko_template_tabs.json",
+    "zxyn-core/button_panel.json",
+    "zxyn-core/neko_button.json",
+    "zxyn-core/button.json",
+
+    // Pause
+    "zxyn-core/zxyn_pause_ui.json"
+
   ]
 }

@@ -1,14 +1,41 @@
 {
   "namespace": "common",
 
-  "top_bar": {
+  "scroll_box/box":{
+		"modifications":[
+			{
+				"control_name":"touch_box",
+				"operation":"remove"
+			}
+		]
+	},
+	"scroll_box/box/mouse_box":{
+		"ignored":false
+	},
+	"scrolling_panel":{
+		"modifications":[
+			{
+				"control_name":"scroll_touch",
+				"operation":"remove"
+			}
+		]
+	},
+	"scrolling_panel/scroll_mouse":{
+		"ignored":false
+	},
+
+  "slider_progress": {
     "type": "image",
-    "alpha": "$alpha_cok",
-    "layer": 100,
-    "texture": "textures/ui/StoreTopBar",
-    "size": [ "100%", 23 ]
+    "color": "$slider_background_color",
+    "texture": "textures/ui/slider_progress"
   },
 
+  "slider_progress_hover": {
+    "type": "image",
+    "color": "$slider_background_color_hover",
+    "texture": "textures/ui/slider_progress_hover"
+  },
+  
   "screen_header_title_panel": {
     "type": "panel",
     "size": [ "fill", 17 ],
@@ -18,7 +45,7 @@
         "store_header_title": {
           "type": "label",
           "font_type": "MinecraftTen",
-          "font_scale_factor": 1,
+          "font_scale_factor": 0.85,
           "size": [ "100%", 17 ],
           "offset": [ 0, 4 ],
           "ignored": "(not $screen_header_title_visible)",
@@ -284,6 +311,7 @@
     ]
   },
 
+
   "base_screen": {
     "type": "screen",
     "vr_mode": "$is_holographic",
@@ -504,6 +532,167 @@
   // Inventory Item 
   //---------------------------------------------------------------------------
 
+  "inventory_panel_bottom_half": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "top_left",
+    "controls": [
+      { "inventory_panel@inventory_panel": {} }
+    ]
+  },
+
+  "inventory_panel_bottom_half_quick_move": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "top_left",
+    "controls": [
+      { "inventory_panel_mod@inventory_panel_mod": {} }
+    ]
+  },
+
+  // DROP ONE
+
+  "drop_one@common.container_slot_button_prototype": {
+    "type": "button",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "hover@$highlight_control": {}
+      }
+    ]
+  },
+
+  "grid_item_for_drop_one@common.container_item": {
+    "$button_ref": "common.drop_one",
+    "$item_collection_name": "inventory_items"
+  },
+
+  "inventory_drop_one": {
+    "type": "panel",
+    "size": [ 88, 83 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "inventory_grid": {
+          "type": "grid",
+          "size": [ 162, 54 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -26 ],
+          "grid_dimensions": [ 9, 3 ],
+          "grid_item_template": "common.grid_item_for_drop_one",
+          "collection_name": "inventory_items"
+        }
+      }
+    ]
+  },
+
+  "inventory_panel_mod_drop_one": {
+    "type": "panel",
+    "size": [ 88, 83 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "inventory_grid": {
+          "type": "grid",
+          "size": [ 162, 54 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -26 ],
+          "grid_dimensions": [ 9, 3 ],
+          "grid_item_template": "common.grid_item_for_drop_one",
+          "collection_name": "inventory_items"
+        }
+      }
+    ]
+  },
+
+  "inventory_panel_bottom_half_mod_drop_one": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "top_left",
+    "controls": [
+      { "inventory_panel_mod_drop_one@inventory_panel_mod_drop_one": {} }
+    ]
+  },
+
+  // DROP ONE STACK
+
+  "drop_stack@common.container_slot_button_prototype": {
+    "type": "button",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "hover@$highlight_control": {}
+      }
+    ]
+  },
+
+  "grid_item_for_drop_stack@common.container_item": {
+    "$button_ref": "common.drop_stack",
+    "$item_collection_name": "inventory_items"
+  },
+
+  "inventory_panel_drop_stack": {
+    "type": "panel",
+    "size": [ 88, 83 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "inventory_grid": {
+          "type": "grid",
+          "size": [ 162, 54 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -26 ],
+          "grid_dimensions": [ 9, 3 ],
+          "grid_item_template": "common.grid_item_for_drop_stack",
+          "collection_name": "inventory_items"
+        }
+      }
+    ]
+  },
+
+  "inventory_panel_bottom_half_mod_drop_stack": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "top_left",
+    "controls": [
+      { "inventory_panel_drop_stack@inventory_panel_drop_stack": {} }
+    ]
+  },
+
+  // QUICK LOOT
+
   "letakkan_otomatis@common.container_slot_button_prototype": {
     "type": "button",
     "button_mappings": [
@@ -513,34 +702,8 @@
         "mapping_type": "pressed"
       },
       {
-        "from_button_id": "button.menu_ok",
+        "from_button_id": "button.menu_select",
         "to_button_id": "button.container_take_all_place_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_back",
-        "to_button_id": "button.container_take_all_place_all",
-        "mapping_type": "pressed",
-        "ignored": "(not $is_ps4)"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.container_auto_place",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.container_take_half_place_one",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_auto_place",
-        "to_button_id": "button.container_auto_place",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.container_auto_place",
         "mapping_type": "pressed"
       },
       {
@@ -555,19 +718,12 @@
       },
       {
         "from_button_id": "button.menu_select",
-        "to_button_id": "button.container_auto_place" // Changed when double click it will automatically auto place
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.container_auto_place", // Changed when double click it will automatically auto place
-        "mapping_type": "double_pressed"
-      },
-      {
-        "to_button_id": "button.shape_drawing",
+        "to_button_id": "button.container_auto_place", // Di ubah ketika double klik maka akan otomatis auto place
         "mapping_type": "pressed"
       },
       {
-        "to_button_id": "button.container_slot_hovered",
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_auto_place", // Di ubah ketika double klik maka akan otomatis auto place
         "mapping_type": "pressed"
       }
     ],
@@ -604,7 +760,6 @@
     ]
   },
 
-  // Bottom half of ui, inventory panel
   "inventory_panel_bottom_half_mod": {
     "type": "panel",
     "size": [ "100%", "50%" ],
@@ -614,5 +769,4 @@
       { "inventory_panel_mod@inventory_panel_mod": {} }
     ]
   }
-
 }

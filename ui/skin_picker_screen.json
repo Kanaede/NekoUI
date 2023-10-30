@@ -1321,8 +1321,6 @@
                 // = 181 pixels, or about 30 characters, plus a bit more if
                 //     enough of those characters are narrow ones.
                 // Marketing should avoid skin names longer than this.
-
-                // Hmmmm..... better
                 "size": [ "default", 10 ],
                 "max_size": [ 181, 10 ],
                 "bindings": [

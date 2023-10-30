@@ -38,14 +38,53 @@
     "$control_name": "settings_common.option_dropdown_control"
   },
 
+  "option_toggle_on@settings_common.option_toggle_state_template": {
+    "texture": "textures/ui/toggle_on",
+    "color": "$toggle_on_default_color"
+  },
+
+  "option_toggle_on_hover@settings_common.option_toggle_state_template": {
+    "texture": "textures/ui/toggle_on_hover",
+    "color": "$toggle_on_hover_color"
+  },
+
+  "option_toggle_control@common.toggle": {
+    "layer": 2,
+    "$toggle_state_binding_name|default": "$option_binding_name",
+    "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
+    "$toggle_enabled_binding_type|default": "global",
+    "size": [ "100%", "100%c" ],
+    "$binding_type": "global",
+    "$binding_condition": "once",
+    "$unchecked_control": "settings_common.option_toggle_off",
+    "$checked_control": "settings_common.option_toggle_on",
+    "$unchecked_hover_control": "settings_common.option_toggle_off_hover",
+    "$checked_hover_control": "settings_common.option_toggle_on_hover",
+    "$unchecked_locked_control": "settings_common.option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "settings_common.option_toggle_off_locked",
+    "$checked_locked_control": "settings_common.option_toggle_on_locked",
+    "$checked_locked_hover_control": "settings_common.option_toggle_on_locked",
+
+    "$enable_directional_toggling": false,
+
+    "enabled": "$enabled",
+    "variables": [
+      {
+        "requires": "(not $option_enabled_binding_name or not $enabled)",
+        "$toggle_enabled_binding_name": "#not_data_bound",
+        "$toggle_enabled_binding_type": "none"
+      }
+    ]
+  },
+
   "option_slider_control": {
     "type": "panel",
-    "size": [ "100% - 10px", 18 ],
+    "size": [ "100%- 5px", 20 ],
     "controls": [
       {
         "slider@common.slider": {
-          "size": [ "100%-10px", 18 ],
-          "$slider_box_size": [ 10, 16 ],
+          "size": [ "100%", 20 ],
+          "$slider_box_size": [ 0, 0 ],
           "offset": [ 1, 0 ],
 
           "$option_label|default": "",
@@ -135,7 +174,17 @@
 
   "settings_content": {
     "type": "panel",
+    "layer": 1,
     "size": [ "100% - 20px", "100% - 20px" ],
+        "$neko_uwu_from|default": [ 0, "25%"],
+    "$neko_uwu_to|default": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@anim_test.neko_push_offset",
+      "@anim_test.neko_pop_offset",
+      "@anim_test.neko_entrance_push_offset",
+      "@anim_test.neko_entrance_pop_offset"
+    ],
     "controls": [
 		// Adding fill background color for all settings.
 		{
@@ -151,8 +200,8 @@
         "texture": "textures/ui/White",
         "keep_ratio": false,
         "size": [ "100%", "100%sm" ],
-        "color": [ 0.0, 0.0, 0.0 ], // First test: [0.239, 0.204, 0.204]
-        "alpha": 0.5,
+        "color": [ 0.08, 0.09, 0.12 ], // First test: [0.239, 0.204, 0.204]
+        "alpha": 0.75,
         "offset": [ 0, 0 ],
         "layer": "$layer",
         "anchor_from": "top_left",
@@ -172,10 +221,11 @@
 
                 "controls": [
                   {
-                    "header@settings_common.header": {}
+                    "header@settings_common.header": {
+                    }
                   },
                   {
-                    "container": {
+                    "container@neko_c.bg_3": {
                       "type": "panel",
                       "size": [ "100%", "100% - 4px" ],
                       "controls": [
@@ -206,10 +256,10 @@
 
   "toggle_button_control": {
     "type": "panel",
-    "$glyph_offset|default": [ 5, 0 ],
+    "$glyph_offset|default": [ 3, 0 ],
     "$glyph_anchor_from|default": "left_middle",
     "$glyph_anchor_to|default": "left_middle",
-    "$button_label_offset|default":  [ 35 , -0.1 ],
+    "$button_label_offset|default":  [ 30 , -1.1 ],
     "layer": 2,
     "controls": [
       {
@@ -260,8 +310,8 @@
       {
         "tab_button_text": {
           "type": "label",
-          "font_type": "smooth",
-          "font_scale_factor": 1,
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 0.85,
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "size": [ "100% - 38px", "default" ],
@@ -290,12 +340,27 @@
     ]
   },
 
+  "section_toggle_base_2@common_toggles.light_content_toggle": {
+    "size": [ "fill", "100% - 3px" ],
+    "$default_texture": "",
+    "$hover_texture": "textures/neko/borderless/core/button_borderless_lighthover",
+    "$pressed_texture": "textures/neko/borderless/core/button_borderless_lightpressed",
+    "$pressed_no_hover_texture": "textures/neko/borderless/core/button_borderless_lightpressednohover",
+    "$toggle_name": "navigation_tab",
+    "$radio_toggle_group": true,
+    "$button_text": "toggle.more_menu.text",
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+    "$toggle_view_binding_name": "more_menu_view"
+  },
+
   "section_toggle_base@common_toggles.light_ui_toggle": {
-    "$light_toggle_default_text_color": [ 1.0, 1.0, 1.0 ],
-    "$light_toggle_hover_text_color": [ 1.0, 1.0, 1.0 ],
-    "$light_toggle_checked_default_text_color": [ 0.53, 0.84, 1.00],
-    "$light_toggle_checked_hover_text_color": [ 0.72, 0.90, 1.00 ],
-    "$default_texture": "textures/neko/toggle_button/button_borderless_light",
+    "$light_toggle_default_text_color": "$light_toggle_default",
+    "$light_toggle_hover_text_color": "$light_toggle_hover",
+    "$light_toggle_checked_default_text_color": "$light_toggle_pressed_default",
+    "$light_toggle_checked_hover_text_color": "$light_toggle_pressed_and_hover",
+
+    "$default_texture": "",
     "$hover_texture": "textures/neko/toggle_button/button_borderless_lighthover",
     "$pressed_texture": "textures/neko/toggle_button/button_borderless_lightpressed",
     "$pressed_no_hover_texture": "textures/neko/toggle_button/button_borderless_lightpressednohover",
@@ -303,7 +368,7 @@
     "anchor_to": "middle",
     "$default_border_visible": false,
     "$hover_border_visible": false,
-    "size": [ "100%", 27 ],
+    "size": [ "100%", 30 ],
     "$button_size_override": [ "100%", "100% + 1px" ],
     "$button_type_panel": "settings_common.toggle_button_control",
 
@@ -321,17 +386,18 @@
   },
 
   "options_dropdown_toggle_control@common_toggles.light_template_toggle": {
-    "$default_text_color": "$light_toggle_default_text_color_2",
-    "$hover_text_color": "$light_toggle_hover_text_color_2",
-    "$default_checked_text_color": "$light_toggle_checked_default_text_color_2",
-    "$hover_checked_text_color": "$light_toggle_checked_hover_text_color_2",
+    "$default_text_color": "$toggle_dropdown_text_default",
+    "$hover_text_color": "$toggle_dropdown_text_hover",
+    "$default_checked_text_color": "$toggle_dropdown_text_pressed",
+    "$hover_checked_text_color": "$toggle_dropdown_text_pressed_and_hover",
 
-    "$default_texture": "textures/neko/borderless/core/button_borderless_light",
-    "$hover_texture": "textures/neko/borderless/core/button_borderless_lighthover",
+    "$default_texture": "textures/neko/borderless/default_dark",
+    "$hover_texture": "textures/neko/borderless/hover",
     "$pressed_texture": "textures/neko/borderless/core/button_borderless_lightpressed",
     "$pressed_no_hover_texture": "textures/neko/borderless/core/button_borderless_lightpressednohover",
     "$locked_button_texture|default": "",
-
+    "$default_border_visible|default": false,
+    "$hover_border_visible|default": false,
 
     "size": [ "100%", "100%" ],
     "$button_type_panel|default": "settings_common.default_options_dropdown_toggle_button_state_content",
@@ -350,6 +416,11 @@
   },
 
   "options_dropdown_dark_toggle_control@common_toggles.dark_template_toggle": {
+    "$default_text_color": "$toggle_dropdown_text_default",
+    "$hover_text_color": "$toggle_dropdown_text_hover",
+    "$default_checked_text_color": "$toggle_dropdown_text_pressed",
+    "$hover_checked_text_color": "$toggle_dropdown_text_pressed_and_hover",
+
     "$default_texture": "textures/neko/dropdown/drop_light",
     "$hover_texture": "textures/neko/dropdown/drop_hover",
     "$pressed_texture": "textures/neko/dropdown/drop_pressed",
@@ -375,7 +446,7 @@
   "core_label": {
     "type": "label",
     "layer": 1000,
-    "color": [ 0.72, 0.90, 1.00 ],
+    "color": [ 1.0, 1.0, 1.0 ],
     "text_alignment": "center"
   },
 
@@ -391,9 +462,9 @@
     ]
   },
 
-  "header@neko_c.bg_3": {
+  "header@neko_c.neko_header": {
     "alpha": 1,
-    "color": [ 0.04, 0.05, 0.07 ],
+    "layer": 10,
  //   "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -403,8 +474,23 @@
         "dialog_title_label@settings_common.core_label": {
           "font_type": "MinecraftTen",
           "color": [ 1.0, 1.0, 1.0 ],
-          "font_scale_factor": 0.87,
-          "offset": [ 0, 9 ],
+          "font_scale_factor": 1.1,
+          "offset": [ 0, 7 ],
+          "size": [ "default" , "100%" ],
+          "text_alignment": "center",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "visible": "$gunakan_dialog_tile_2",
+          "$gunakan_dialog_tile_2|default": false,
+          "text": "$neko_title_text"
+        }      
+      },
+      {
+        "dialog_title_label_2@settings_common.core_label": {
+          "font_type": "MinecraftTen",
+          "color": [ 1.0, 1.0, 1.0 ],
+          "font_scale_factor": 1.25,
+          "offset": [ 0, 4 ],
           "size": [ "default" , "100%" ],
           "text_alignment": "center",
           "anchor_from": "center",
@@ -430,7 +516,7 @@
                 "size": [ 25 , "100%" ],
                 "controls": [
                   {
-                    "back_button@play_ui.back_button": {}
+                    "back_button@neko_c.common_back_button": {}
                   }
                 ]
               }
@@ -452,26 +538,33 @@
   },
 
   "selector_group_label@neko_c.bg_3": {
-   // "type": "panel",
-   "color": [ 0.07, 0.09, 0.13 ],
-    "size": [ "100% - 1px", "100%c + 10px" ],
+    "color": [ 0.18, 0.19, 0.25 ],
+    "size": [ "100%", "100%c + 2px" ],
     "offset": [ 0, -1 ],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "layer": 5,
     "controls": [
-      {                           
-        "selector_group_label_2": {
-          "type": "label",
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "text_alignment": "center",
-          "text": "$yuki",
-          "font_type": "smooth",
-          "layer": 1,
-          "size": [ "100%", "default" ],
-          "color": [ 1.0, 1.0, 1.0 ],
-          "offset": [ 0, 0 ]
+      {
+        "panel_a": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            {                           
+              "selector_group_label_2": {
+                "type": "label",
+                "text_alignment": "center",
+                "font_type": "MinecraftTen",
+                "shadow": false,
+                "font_scale_factor": 0.7,
+                "text": "$yuki",
+                "layer": 1,
+                "offset": [ 0, -1.1 ],
+                "size": [ "100%", "default" ],
+                "color": [ 1.0, 1.0, 1.0 ]
+              }
+            }
+          ]
         }
       }
     ]
@@ -490,7 +583,7 @@
   "selector_area": {
     "type": "panel",
     "offset": [ 0, -5 ],
-    "size": [ "150px", "100% - 40px" ],
+    "size": [ "165px", "100% - 40px" ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "layer": 4,
@@ -520,7 +613,7 @@
   "content_area": {
     "type": "panel",
     "offset": [ 0, -5 ],
-    "size": [ "100% - 160px", "100% - 40px" ],
+    "size": [ "100% - 175px", "100% - 40px" ],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "layer": 5,
@@ -602,27 +695,9 @@
 
   "dynamic_dialog_screen@common.base_screen": {
     "type": "screen",
-    "cache_screen": true,
-
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.menu_exit",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_tab_left",
-        "to_button_id": "button.menu_tab_left",
-        "mapping_type": "global",
-        "scope": "view"
-      },
-      {
-        "from_button_id": "button.menu_tab_right",
-        "to_button_id": "button.menu_tab_right",
-        "mapping_type": "global",
-        "scope": "view"
-      }
-    ],
+    "$fill_alpha": 0,
+    "$screen_bg_content": "",
+ 
     "variables": [
       {
         "requires": "($is_realm_slot or $realm_no_world_edit)",

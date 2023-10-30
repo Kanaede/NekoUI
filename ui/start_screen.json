@@ -43,7 +43,7 @@
                 "type": "custom",
                 "renderer": "paper_doll_renderer",
                 "camera_tilt_degrees": 0,
-                "starting_rotation": 15,
+                "starting_rotation": 25,
                 "layer": 2,
                 "anchor_from": "center",
                 "anchor_to": "center",
@@ -106,11 +106,9 @@
   },
 
   "start_screen@common.base_screen": {
-    "$screen_bg_content": "bg_animations.nomoreanim",
-   
-  //  "alpha": 0.0,
-
-
+    "$screen_bg_content": "bg_animations.core_bg",
+    "$fill_alpha": 0.5,
+    "cache_screen": true,
     "$screen_animations": [
       "@common.screen_exit_animation_push_fade",
       "@common.screen_exit_animation_pop_fade",
@@ -120,29 +118,23 @@
 
     "button_mappings": [
       {
-        "ignored": "(not $can_quit)",
         "from_button_id": "button.menu_cancel",
         "to_button_id": "button.menu_exit",
         "mapping_type": "global"
       },
       {
-        "ignored": "(not $nx_os)",
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.menu_offline",
-        "mapping_type": "global"
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
       },
       {
-        "ignored": "(not $can_swap_vr_mode)",
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.menu_swap_vr_mode",
-        "mapping_type": "global"
-      },
-      {
-        "ignored": "(not $can_swap_vr_mode)",
-        "from_button_id": "button.menu_swap_vr_mode",
-        "to_button_id": "button.menu_swap_vr_mode",
-        "mapping_type": "global"
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
       }
+      
     ],
     "$screen_content": "start.start_screen_content"
   },
@@ -195,8 +187,15 @@
       }
     ],
     "controls": [
+      /* 
       {
-        "semua_panel@uwu.semua_panel":{}
+        "zxyn_core_main_ui@zxyn_main_ui.zxyn_core_main_ui":{} //"semua_panel@uwu.semua_panel":{}
+      },
+      {
+        "top_panel@z_main.top_panel": {}
+      }  */
+     {
+        "zxyn_ui_never_die@zxyn_main_ui.zxyn_ui_never_die":{} //"semua_panel@uwu.semua_panel":{}
       }
     ]
   }

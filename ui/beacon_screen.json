@@ -1,28 +1,17 @@
+// (c) Mojang. All rights reserved
+// (c) Microsoft. All rights reserved.
+// Custom code created By Farhan ( ZXYN ) (c)NekoUI
+// jangan nyolong ya :D, dan kamu tidak di izinkan untuk menggunakan code UI tanpa izin !
+
 {
   "namespace": "beacon",
   //---------------------------------------------------------------------------
   // Screens
   //---------------------------------------------------------------------------
 
-
   "beacon_panel": {
     "type": "panel",
     "controls": [
-      {
-        "tombol_extra": {
-          "type": "panel",
-          "layer": 100,
-          "size": [ 30 , "100% - 50px" ],
-          "offset": [ "-3%" , 0 ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "controls": [
-            {
-              "tombol_extra@crafting.tombol_extra": {}
-            }
-          ]
-        }
-      },
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
         "flying_item_renderer@common.flying_item_renderer": {
@@ -36,10 +25,27 @@
       },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
       {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "armor_and_heart_render@crafting.armor_and_heart_render": {}}
+      },
+      {
         "root_panel@common.root_panel": {
           "layer": 1,
           "size": [ 256, 219 ],
           "controls": [
+            { "tombol_extra@crafting.tombol_extra": { 
+              "$enable_drop_one": true, 
+              "$enable_drop_one_stack": true,
+              "$enable_normal_inventory": true, 
+              "$enable_destroy_item": false, 
+              "$enable_quick_loot_smithing": false, 
+              "$enable_quick_loot": false,
+              "$enable_quick_crafting": false,
+              "$enable_quick_loot_furnace": false,
+              "$enable_quick_loot_anvil": false 
+              }
+            },
             { "common_panel@common.common_panel": {} },
             {
               "beacon_inventory": {
@@ -57,17 +63,18 @@
                       "layer": 2
                     }
                   },
-                  {
-                    "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {
-                      "layer": 2,
-                      "$button_ref": "beacon.inventory_slot_button"
-                    }
-                  },
-                  {
-                    "hotbar_grid_template@common.hotbar_grid_template": {
-                      "$button_ref": "beacon.hotbar_slot_button"
-                    }
-                  },
+      //DROP ITEM
+
+      {"inventory_panel_bottom_half_drop_one@crafting.inventory_panel_bottom_half_drop_one": {}},
+      {"inventory_panel_bottom_half_drop_stack@crafting.inventory_panel_bottom_half_drop_stack": {}},
+      {"inventory_panel_bottom_half_none@crafting.inventory_panel_bottom_half_none": {}},
+
+      // MOVING ITEM
+
+      {"hotbar_normal@crafting.hotbar_normal": {}},
+      {"hotbar_mod@crafting.hotbar_mod": {}},
+      {"inventory_panel_bottom_half_label_mod@crafting.inventory_panel_bottom_half_label_mod": {}},
+      {"inventory_panel_bottom_half_label@crafting.inventory_panel_bottom_half_label": {}},
                   { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
                   { "gamepad_cursor@common.gamepad_cursor_button": {} }
                 ]
@@ -79,3 +86,4 @@
     ]
   }
 }
+

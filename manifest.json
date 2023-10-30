@@ -1,30 +1,18 @@
 {
     "format_version": 2,
     "header": {
-        "description": "§l[ §4ID §f]Created by : RakaGIT\nRestart for first time use",
-        "name": "§lNeko§bUI",
-        "uuid": "20bd88fd-bc8c-4494-9940-9313895f48e1",
-        "version": [10, 0, 0],
-        "min_engine_version": [1, 19, 10]
+        "description": "§lFirst use please restart the game!\nYoutube: @zxyn404 ( Han's )",
+        "name": "§lNEKO§b PROJECTS§b",
+        "uuid": "3f467bc0-cd24-4628-b113-67b6a16c8aed",
+        "version": [13, 0, 1],
+        "min_engine_version": [1, 20, 10]
     },
     "modules": [
         {
-            "description": "Created by : RakaGIT\nRestart for first time use",
+            "description": "§lFirst use please restart the game!\nYoutube: @zxyn404 ( Han's )",
             "type": "resources",
-            "uuid": "309a0ef6-9bf6-40c6-9d0c-a5a1174f5c2e",
-            "version": [10, 0, 0]
+            "uuid": "c704e56e-5231-4291-b7d4-c0f9c6abaca2",
+            "version": [13, 0, 1]
         }
-    ],
-    "subpacks": [
-        {
-           "folder_name": "er_compass",
-           "name": "\nRecovery Compass : §aEnable\n§eDisable it if you want Main server! [ Game can Crash if Enabled ]",
-           "memory_tier": 1
-        },
-        {
-           "folder_name": "dr_compass",
-           "name": "\nRecovery Compass : §4Disable",
-           "memory_tier": 1
-        }
-    ] 
+    ]
 }

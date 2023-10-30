@@ -37,10 +37,9 @@
 
   "title_panel_pocket": {
     "type": "panel",
-    "offset": [ 0, "5%" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "size": [ "40%", 40 ],
+    "size": [ "30%", 40 ],
     "controls": [
       { "title_image@common_art.title_image": {} },
       {
@@ -53,8 +52,7 @@
 
   "title_panel_win10": {
     "type": "panel",
-    "size": [ "50%", "15.85%x" ],
-    "offset": [ 0, "5.5%" ],
+    "size": [ "40%", "15%x" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
@@ -93,7 +91,7 @@
       {
         "banner_control": {
           "type": "panel",
-          "ignored": true,
+          "ignored": true, // commit 9038293a5d684e150321d46fee14e6beb0043c42 to bring it back
           "controls": [
             {
               "banner": {
