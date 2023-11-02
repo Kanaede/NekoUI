@@ -2,8 +2,8 @@
     "format_version": 2,
     "header": {
         "description": "§lFirst use please restart the game!\nYoutube: @zxyn404 ( Han's )",
-        "name": "§lNeko§bUI",
-        "uuid": "01cc1d39-9654-4d45-aeab-9c33b11dd633",
+        "name": "§lNEKO§b PROJECTS§b",
+        "uuid": "07a2abc0-8a76-46e1-85d2-8813f0f9bf6e",
         "version": [14, 0, 4],
         "min_engine_version": [1, 20, 31]
     },
@@ -11,7 +11,7 @@
         {
             "description": "§lFirst use please restart the game!\nYoutube: @zxyn404 ( Han's )",
             "type": "resources",
-            "uuid": "e1f0eee4-d6c1-490a-abee-8648f2dfa3e5",
+            "uuid": "e79e7d77-3a0b-482e-a7b1-d956a8679041",
             "version": [14, 0, 4]
         }
     ]
