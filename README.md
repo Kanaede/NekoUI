@@ -5,7 +5,7 @@
     <br><br>
 </h1>
 
-## By Han's404 and edited by Kanaede
+## By Han's and edited by Kanaede
 
 This is just a personal edit, if you ask for the original it is on the creator's YouTube
 
