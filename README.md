@@ -1,11 +1,11 @@
 <p align="center"><img src="/pack_icon.png" alt="Logo" width="200"></p>
-<h1 align="center">NekoProject: UI<br>
+<h1 align="center">NEKO UI PROJECT BY Han's<br>
 	<a href="https://www.youtube.com/@zxyn404"><img src="https://img.shields.io/badge/Youtube-Han's404-FF0000?logo=youtube&logoColor=%23FF0000" alt="Youtube"></a>
 	<a href="https://discord.com/invite/TpMBBvGyzq"><img src="https://img.shields.io/badge/Discord-Neko_Project-5865F2?logo=discord&logoColor=5865F2" alt="Discord"></a>
     <br><br>
 </h1>
 
-## By Han's and edited by Kanaede
+## By Han's404 and edited by Kanaede
 
 This is just a personal edit, if you ask for the original it is on the creator's YouTube
 
@@ -52,11 +52,8 @@ Creator: Han's
 Version: v.14.44 - Release
 
 > Changes can occur at any time, the texture pack owner can make any changes.
-
 > The original owner has the right to create new rules and change permits.
-
 > If you have an update for the next version, please contact Han's because I am not part of the developer.
-
 > modifying any code will be penalized and it's under original ownership, not mine
 
 ### Change Log
