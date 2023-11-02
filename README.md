@@ -1,5 +1,5 @@
 <p align="center"><img src="/pack_icon.png" alt="Logo" width="200"></p>
-<h1 align="center">NEKO UI PROJECT BY Han's<br>
+<h1 align="center">NekoProject: UI<br>
 	<a href="https://www.youtube.com/@zxyn404"><img src="https://img.shields.io/badge/Youtube-Han's404-FF0000?logo=youtube&logoColor=%23FF0000" alt="Youtube"></a>
 	<a href="https://discord.com/invite/TpMBBvGyzq"><img src="https://img.shields.io/badge/Discord-Neko_Project-5865F2?logo=discord&logoColor=5865F2" alt="Discord"></a>
     <br><br>
