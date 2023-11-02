@@ -1,12 +1,12 @@
 {
   "namespace": "progress",
 
-"label_persen": {"anchor_from": "center", "anchor_to": "center", "localize": false, "shadow": false, "layer": 3, "font_size": "extra_large","type": "label", "text": "$neko",
+          
+"label_persen": {"alpha": "@zxyn.alpha_0","anchor_from": "center", "anchor_to": "center", "font_type": "EudoxusSans-Bold", "localize": false, "shadow": false, "layer": 3, "font_scale_factor": 4,"type": "label", "text": "$neko",
 "bindings": [{"binding_name": "#loading_bar_percentage"},{"binding_type": "view","source_property_name": "((( #loading_bar_percentage > $persentase_min ) and ( #loading_bar_percentage < $persentase_maks )) or ( #loading_bar_percentage = $persentase_min ))","target_property_name": "#visible"}]},
  
 
  "persen_panel": {
-  
   "type": "panel",
   "controls": [
             // 100 - 80
@@ -152,7 +152,7 @@
               "loading_spin@progress.loading_spin": {
                 "anchor_from": "center",
                 "anchor_to": "center",
-                "size": [ "100%" , 25 ]
+                "size": [ "100%" , 15 ]
               }
             },
             { "spacer": { "type": "panel", "size": [ 15, 15 ]}},
@@ -212,10 +212,9 @@
 
 
   "judul_baru_new@neko_c.bg_3": {
-    "color": [ 0.0, 0.0, 0.0 ], 
-    "alpha": 0.8,
+    "alpha": 1,
     "layer": 1,
-    "size": [ "100%", 50 ],
+    "size": [ "100%", 40 ],
     "anchor_to": "bottom_left",
     "anchor_from": "bottom_left",
     "controls": [
@@ -229,16 +228,7 @@
               "spacer_a": { "type": "panel", "size": [ 5, 5 ]}
             },
             {
-              "panel_loading": { "type": "panel","size": [ 15, "100%" ],
-              "$neko_uwu_from|default": [ "-10%", 0],
-              "$neko_uwu_to|default": [ 0, 0 ],
-              "animation_reset_name": "screen_animation_reset",
-              "anims": [
-                "@anim_test.neko_push_offset",
-                "@anim_test.neko_pop_offset",
-                "@anim_test.neko_entrance_push_offset",
-                "@anim_test.neko_entrance_pop_offset"
-              ],"controls": [{ "loading_spin@progress.loading_spin": {"size": [ "100%" , "100%" ]}}]}},
+              "panel_loading": { "type": "panel","size": [ 15, "100%" ],"controls": [{ "loading_spin@progress.loading_spin": {"color": "black", "size": [ "100%" , "100%" ]}}]}},
             {
               "spacer_b": { "type": "panel", "size": [ 15, 15 ]}
             },
@@ -252,13 +242,16 @@
                       "type": "stack_panel",
                       "controls": [
                         {
-                          "label_panel": { "type": "panel", "size": [ "100%", "100%c" ], "controls": [{"judul@progress.custom_label_progress": { "font_size": "small", "anchor_from": "top_left", "anchor_to": "top_left", "size": [ "default", "default" ],"text": "#title_text","bindings": [{"binding_name": "#title_text"}]}}]}
+                          "label_panel": { "type": "panel", "size": [ "100%", "100%c" ], "controls": [{"judul@progress.custom_label_progress": {"font_type": "EudoxusSans-Bold", "color": "black", "font_scale_factor": 0.9, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ "default", "default" ],"text": "#title_text","bindings": [{"binding_name": "#title_text"}]}}]}
                         },
                         {
                           "spacer_2": { "type": "panel", "size": [ 1.5, 1.5 ]}
                         },
                         {
-                          "label_panel_2": { "type": "panel", "size": [ "100%", "100%c" ], "controls": [{"deskripsi@progress.custom_label_progress": {"font_size": "small", "anchor_from": "top_left", "anchor_to": "top_left", "size": [ "default", "default" ],"text": "#progress_text","bindings": [{"binding_name": "#progress_text"}]}}]}
+                          "label_panel_2": { "type": "panel", "size": [ "100%", "100%c" ], "controls": [{"deskripsi@progress.custom_label_progress": {"font_type": "EudoxusSans-Medium", "color": "black", "font_scale_factor": 0.65,  "anchor_from": "top_left", "anchor_to": "top_left", "size": [ "default", "default" ],"text": "#progress_text","bindings": [{"binding_name": "#progress_text"}]}}]}
+                        },
+                        {
+                          "spacer_3": { "type": "panel", "size": [ 1.5, 1.5 ]}
                         }
                       ]
                     }
@@ -276,7 +269,7 @@
     "type": "panel",
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
-    "size": [ "100%", 2 ],
+    "size": [ "100%", 1 ],
     "layer": 5,
     "controls": [
       {
@@ -360,7 +353,8 @@
 
   "button_panel": {
     "type": "panel",
-    "size": [ 90, 20 ],
+    "size": [ 50, 20 ],
+    "offset": [ -10 , 1.2 ],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "layer": 2,
@@ -470,7 +464,7 @@
         "$button_state_pressed_base": "common-classic.button_state_pressed"
       }
     ],
-    "$neko_uwu_from|default": [ "-50%", 0],
+    "$neko_uwu_from|default": [ 0, "20%"],
     "$neko_uwu_to|default": [ 0, 0 ],
     "controls": [
       {
@@ -484,21 +478,9 @@
           "controls": [
             {
               "progress_title_text@progress.judul_baru_new": {
-                "$neko_uwu_from|default": [ 0, "15%"],
-                "$neko_uwu_to|default": [ 0, 0 ],
-                "animation_reset_name": "screen_animation_reset",
-                "anims": [
-                  "@anim_test.neko_push_offset",
-                  "@anim_test.neko_pop_offset",
-                  "@anim_test.neko_entrance_push_offset",
-                  "@anim_test.neko_entrance_pop_offset"
-                ],
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left"
               }
-            },
-            {
-              "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {}
             }
           ]
         }
@@ -541,11 +523,32 @@
 
   "world_convert_modal_progress_screen_content": {
     "type": "panel",
-
     "layer": 3,
     "controls": [
-      { "bg_anim@bgl_animations.bg_anim": {}},
-      { "persen_panel@progress.persen_panel": {}},
+   { "bg_anim@bgl_animations.bg_anim": {}},
+   {
+    "neko": {
+      "type": "panel",
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "size": [ "30%", 60 ],
+      "controls": [
+        {
+          "neko": {
+            "type": "stack_panel",
+            "orientation": "vertical",
+            "size": [ "100%", "100%" ],
+            "controls": [
+              { "persen_panel@progress.persen_panel": {}},
+              {
+                "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {}
+              }
+            ]
+          }
+        }
+      ]
+    }
+   },
       {
         "world_modal_progress_panel_2@progress.world_modal_progress_panel_2": {
           "$modal_button_panel_type": "progress.modal_button_panel"
@@ -557,6 +560,15 @@
 
   "world_save_modal_progress_screen_content": {
     "type": "panel",
+    "$neko_uwu_from|default": [ "-50%", 0],
+    "$neko_uwu_to|default": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@anim_test.neko_push_offset",
+      "@anim_test.neko_pop_offset",
+      "@anim_test.neko_entrance_push_offset",
+      "@anim_test.neko_entrance_pop_offset"
+    ],
     "controls": [
       {
         "world_modal_progress_panel_2@progress.world_modal_progress_panel_2": {

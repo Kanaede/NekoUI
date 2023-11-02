@@ -11,18 +11,18 @@
     "$ignore_search|default": false,
     "controls": [
       {
-        "top_bar@neko_c.neko_header": {
+        "top_bar": {
+          "type": "panel",
           "size": "$store_header_size",
           "focus_container": true,
           "use_last_focus": false,
           "focus_wrap_enabled": false,
           "focus_nagivation_mode_up": "stop",
           "controls": [
-            { "screen_header_title_panel@neko_c.screen_header_title_panel": { "$screen_header_title_binding_type": "global"} },
             {
               "title_stack_panel": {
                 "type": "stack_panel",
-                "size": [ "100%", 25 ],
+                "size": [ "100%", 30 ],
                 "orientation": "horizontal",
                 "controls": [
                   {
@@ -32,11 +32,12 @@
                     }
                   },
                   {
-                    "a": { "type": "panel", "size": [ 25, "100%" ], "controls": [ { "common_back_button@neko_c.common_back_button": {}}]}
+                    "a": { "type": "panel", "size": [ 30, "100%" ], "controls": [ { "common_back_button@neko_c.common_back_button": {}}]}
                   },
                   {
                     "b@play_ui.panel_content_button": { "ignored": "($is_on_3p_server or $ignore_search)", "controls": [ { "market_search_button@neko_c.market_search_button": {}}]}
                   },
+                 { "screen_header_title_panel@neko_c.screen_header_title_panel": { "$screen_header_title_binding_type": "global"} },
                   {
                     "padding3": {
                       "type": "panel",

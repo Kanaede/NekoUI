@@ -43,7 +43,7 @@
                 "type": "custom",
                 "renderer": "paper_doll_renderer",
                 "camera_tilt_degrees": 0,
-                "starting_rotation": 25,
+                "starting_rotation": 0,
                 "layer": 2,
                 "anchor_from": "center",
                 "anchor_to": "center",

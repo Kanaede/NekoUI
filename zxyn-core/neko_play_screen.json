@@ -30,7 +30,7 @@
     "$glyph_offset|default": [ 0 , -5 ],
     "$glyph_anchor_from|default": "center",
     "$glyph_anchor_to|default": "center",
-    "$button_label_offset|default": [ 0 , 1.1 ],
+    "$button_label_offset|default": [ 0 , 1.3 ],
     "layer": 2,
     "controls": [
       {
@@ -83,8 +83,8 @@
       {
         "title_button_text": {
           "type": "label",
-          "font_type": "MinecraftTen",
-          "font_scale_factor": 0.7,
+          "font_type": "EudoxusSans-Bold",
+          "font_scale_factor": 0.8,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100% - 20px", "15px" ],
@@ -155,10 +155,11 @@
 },
 
 "server_navigation_tab@play_ui.top_tab": {
+  "$ukuran_text_count": 0.9,
   "$tab_view_binding_name": "server_navigation_tab_toggle",
   "$tab_icon": "server_tab_icon",
-  "$count_text_name": "#server_world_item_count",
-  "$tab_text_name": "selectWorld.tab.thirdParty",
+  "$count_text_name": "Servers",
+  "$tab_text_name": "Featured",
   "$toggle_group_forced_index": 2,
   "$tab_content": "play.common_navigation_tab_content",
   "bindings": [
@@ -170,10 +171,11 @@
 },
 
 "server_third_party@play_ui.top_tab": {
+  "$ukuran_text_count": 0.9,
   "$tab_view_binding_name": "third_party_server_navigation",
   "$tab_icon": "server_tab_icon_3rd",
-  "$count_text_name": "3rd",
-  "$tab_text_name": "servers.third_party",
+  "$count_text_name": "Servers",
+  "$tab_text_name": "Thirdparty",
   "$toggle_group_forced_index": 3,
   "$tab_content": "play.common_navigation_tab_content",
   "bindings": [
@@ -185,28 +187,36 @@
 },
 
 
-"custom_button@common_buttons.light_text_button": {
+"custom_button@common_buttons.neko_button_uwu": {
   "$button_type_panel": "play_ui.custom_button_template",
-  "$default_button_texture": "textures/neko/borderless/main_ui/button_borderless_light",
-  "$hover_button_texture": "textures/neko/borderless/main_ui/button_borderless_lighthover",
-  "$pressed_button_texture": "textures/neko/borderless/main_ui/button_borderless_lightpressed",
-  "$locked_button_texture": "textures/neko/borderless/main_ui/button_borderless_lightpressed",
+  "$ukuran_neko_x": [ "100% - 2px", 0 ],
+  "$default_button_texture": "textures/neko/borderless/main_ui/button_borderless_dark_line",
+  "$hover_button_texture": "textures/neko/borderless/main_ui/button_borderless_dark_line_hover",
+  "$pressed_button_texture": "textures/neko/borderless/main_ui/button_borderless_dark_line_hover",
+  "$locked_button_texture": "textures/neko/borderless/main_ui/button_borderless_dark_line_lock",
   "anchor_from": "top_middle",
   "anchor_to": "top_middle",
+  "$use_neko_panel": false,
   "$border_visible": false,
-  "size": [ "100%" ,  50 ],
+  "size": [ "100%" ,  40 ],
   "$glyph_size": [ 25, 25 ],
 
 // Warna Teks
   "$default_text_color|default": "$warna_default",
   "$hover_text_color|default": "$warna_dihover",
   "$pressed_text_color|default": "$warna_ditekan",
-  "$locked_text_color|default": "$warna_ditekan_dan_hover"
+  "$locked_text_color|default": "$dikunci"
 }, 
 
 "quick_play_button@play_ui.custom_button": {
+  "size": [ "100%" ,  50 ],
   "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
-  "$default_button_texture": "textures/neko/borderless/main_ui/quick_play",
+  "$hover_text_color|default": [ 0.16, 0.16, 0.16 ],
+  "$pressed_text_color|default": [ 0.16, 0.16, 0.16 ],
+  "$default_button_texture": "textures/neko/button_icon/play_screen_icon/quick_play_button",
+  "$hover_button_texture": "textures/neko/button_icon/play_screen_icon/quick_play_button_hover",
+  "$pressed_button_texture": "textures/neko/button_icon/play_screen_icon/quick_play_button_hover",
+  "$locked_button_texture": "textures/neko/button_icon/play_screen_icon/quick_play_button_hover",
   "$icon_texture": "quick_play",
   "$icon_line_texture": "quick_play_color_line",
   "$pressed_button_name": "button.menu_quick_play",
@@ -265,7 +275,7 @@
       "binding_type": "global"
     },
     {
-      "binding_name": "#cross_platform_enabled",
+      "binding_name": "( #cross_platform_enabled or #is_network_available_and_multiplayer_visible )",
       "binding_name_override": "#enabled"
     }
   ]
@@ -276,7 +286,7 @@
   "$icon_texture": "join_by_code",
   "$icon_line_texture": "join_by_code_line",
   "$button_text": "networkWorld.joinByCode",
-  "$pressed_button_name": "button.menu_network_join_by_code",
+  "$pressed_button_name": "button.menu_network_join_by_code_popup_join",
   "button_mappings": [
     {
       "from_button_id": "button.menu_select",
@@ -292,11 +302,11 @@
   "bindings": [
     {
       "binding_name": "#join_by_code_visible",
-      "binding_name_override": "#visible",
+      "binding_name_override": "#enabled",
       "binding_type": "global"
     },
     {
-      "binding_name": "#cross_platform_enabled",
+      "binding_name": "( #cross_platform_enabled or #is_network_available_and_multiplayer_visible )",
       "binding_name_override": "#enabled"
     }
   ]
@@ -304,7 +314,7 @@
 
 
 "create_server_button@common_toggles.light_content_toggle": {
-  "size": [ "100%" , 50 ],
+  "size": [ "100%" , 40 ],
   "anchor_from": "center",
   "anchor_to": "center",
   "$icon_texture": "add_server",
@@ -313,9 +323,9 @@
 
   //Warna
   
-  "$light_toggle_default_text_color": [ 1.0, 1.0, 1.0 ],
-  "$light_toggle_hover_text_color": [ 0.15, 0.15, 0.15 ],
-  "$light_toggle_checked_default_text_color": [ 0.15, 0.15, 0.15 ],
+  "$light_toggle_default_text_color": [ 0.63, 0.91, 1.00 ],
+  "$light_toggle_hover_text_color": [ 0.63, 0.91, 1.00 ],
+  "$light_toggle_checked_default_text_color": [ 0.96, 0.94, 0.52 ],
   "$light_toggle_checked_hover_text_color": [ 0.09, 0.13, 0.17 ],
 
   //Glyph
@@ -328,10 +338,11 @@
   "$light_glyph_toggle_checked_hover_color": [ 1.0, 1.0, 1.0 ],
 
   //Texture
-  "$default_texture": "textures/neko/borderless/default_dark", //"textures/neko/borderless/button_borderless_light",
-  "$hover_texture": "textures/neko/borderless/pressed", //"textures/neko/borderless/button_borderless_lightpressed",
-  "$pressed_texture": "textures/neko/borderless/hover", //"textures/neko/borderless/button_borderless_lighthover",
+  "$default_texture": "textures/neko/borderless/main_ui/button_borderless_dark_line", //"textures/neko/borderless/button_borderless_light",
+  "$hover_texture": "textures/neko/borderless/main_ui/button_borderless_dark_line_hover", //"textures/neko/borderless/button_borderless_lightpressed",
+  "$pressed_texture": "textures/neko/borderless/main_ui/button_borderless_dark_line_hover", //"textures/neko/borderless/button_borderless_lighthover",
   "$pressed_no_hover_texture": "textures/neko/borderless/hover", //"textures/neko/borderless/button_borderless_light",
+  "$locked_texture": "textures/neko/borderless/main_ui/button_borderless_dark_line_lock",
   
   //Border
   "$default_border_visible": false,
@@ -349,15 +360,21 @@
   "$toggle_on_hover_binding_name": "none",
   "$toggle_tab_focus_binding_type": "global",
   "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
-  "$toggle_group_forced_index": 100
+  "$toggle_group_forced_index": 100,
+  "bindings": [
+    {
+      "binding_name": "#is_network_available_and_multiplayer_visible",
+      "binding_name_override": "#enabled"
+    }
+  ]
 },
 
   // upper left title
   "dialog_title_label": {
     "type": "label",
-    "font_type": "MinecraftTen",
+    "font_type": "EudoxusSans-Bold",
     "font_scale_factor": 1.2,
-    "offset": [ 7, 0 ],
+    "offset": [ 7, -1.5 ],
     "layer": 10, 
     "color": "white",
     "anchor_from": "left_middle",
@@ -439,7 +456,7 @@
             },
             {
               "join_dengan_code@play_ui.join_dengan_code": {}
-            }
+            } 
           ]
         }
       }
@@ -448,7 +465,7 @@
 
   "panel_content_button": {
     "type": "panel",
-    "size": [ 25 , "100%" ]
+    "size": [ 30 , "100%" ]
   }, 
   
   "panel_tab_2": {
@@ -471,66 +488,13 @@
           "anchor_to": "top_right",
           "size": [ "100%", "100%" ],
           "controls": [
-            { "a": { "type": "panel", "size": [ "20%", "100%"],  
-            "controls": [
-              {
-                "uwu": {
-                  "type": "stack_panel",
-                  "size": [ "100%", "100%" ],
-                  "orientation": "horizontal",
-                  "controls": [
-                    {
-                      "space_00": {
-                        "type": "panel",
-                        "size": [ "2%", "100%" ]
-                      }
-                    },
-                    {
-                      "panel_content_button@play_ui.panel_content_button": {             "bindings": [
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "venti",
-                          "source_property_name": "( not #toggle_state )",
-                          "target_property_name": "#visible"
-                        }
-                      ],"controls": [ { "common_back_button@neko_c.common_back_button": {}}]}
-                    },
-                    {
-                      "panel_content_button@play_ui.panel_content_button": { "controls": [ { "more_menu_play@play_ui.more_menu_play": {}}]}
-                    }
-                  ]
-                }
-              }
-            ]}},
             { "world_navigation_tab@play_ui.world_navigation_tab": {}},
-            { "spacer": { "type": "panel", "size": [ "2%", "100%"]}},
+            { "spacer": { "type": "panel", "size": [ "0.5%", "100%"]}},
             { "friends_navigation_tab@play_ui.friends_navigation_tab": {}},
-            { "spacer": { "type": "panel", "size": [ "2%", "100%"]}},
+            { "spacer": { "type": "panel", "size": [ "0.5%", "100%"]}},
             { "server_navigation_tab@play_ui.server_navigation_tab": {}},
-            { "spacer": { "type": "panel", "size": [ "2%", "100%"]}},
-            { "server_third_party@play_ui.server_third_party": {}},
-            { "a": { "type": "panel", "size": [ "20%", "100%"],
-            "anchor_to": "top_right",
-            "anchor_from": "top_right",
-            "controls": [
-              {
-                "uwu": {
-                  "type": "stack_panel",
-                  "orientation": "horizontal",
-                  "size": [ "100%c", "100%" ],
-                  "anchor_to": "top_right",
-                  "anchor_from": "top_right",
-                  "controls": [
-                    {
-                      "space_00": {
-                        "type": "panel",
-                        "size": [ "5px", "100%" ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]}}
+            { "spacer": { "type": "panel", "size": [ "0.5%", "100%"]}},
+            { "server_third_party@play_ui.server_third_party": {}}
           ]
         }
       }
@@ -554,32 +518,23 @@
           "anchor_to": "top_right",
           "size": [ "100%", "100%" ],
           "controls": [
+            { "world_navigation_tab@play_ui.world_navigation_tab": {}},
+            { "spacer": { "type": "panel", "size": [ "0.5%", "100%"]}},
+            { "friends_navigation_tab@play_ui.friends_navigation_tab": {}},
+            { "spacer": { "type": "panel", "size": [ "0.5%", "100%"]}},
+            { "server_navigation_tab@play_ui.server_navigation_tab": {}},
+            { "spacer": { "type": "panel", "size": [ "0.5%", "100%"]}},
+            { "server_third_party@play_ui.server_third_party": {}},
+            { "spacer": { "type": "panel", "size": [ "1%", "100%"]}}
           ]
         }
       }
     ]
   },
 
-  "more_menu_play@zxyn_main_core.core_toggle": {
-    "$default_texture": "textures/neko/borderless/core/button_borderless_light",
-    "$hover_texture": "textures/neko/borderless/core/button_borderless_lighthover",
-    "$pressed_texture": "textures/neko/borderless/core/button_borderless_lightpressed",
-    "$pressed_no_hover_texture": "textures/neko/borderless/core/button_borderless_lightpressed",
-    "$icon_texture": "textures/neko/button_icon/main_c",
-    "$icon_default_color": [ 0.0, 0.0, 0.0 ],
-    "$icon_hover_color": [ 0.52, 1.00, 0.85 ],
-   "$icon_offset": [ -0.5, 0 ],
-    "$icon_pressed_color": [ 1.0, 1.0, 1.0 ],
-    "size": [ "100% - 3px", "100% - 3px" ],
-    "$icon_size": [ 18, 18 ],
-    "$radio_toggle_group": false,
-    "$toggle_name": "",
-    "$toggle_view_binding_name": "venti"
-  },
-
-  "tap_panel_and_back@neko_c.neko_header": {
-    "layer": 10,
-    "size": [ "100%" , 25 ],
+  "tap_panel_and_back": {
+    "type": "panel",
+    "size": [ "100%" , 30 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
@@ -592,7 +547,7 @@
             {
               "space_01": {
                 "type": "panel",
-                "size": [ "35.5%", "100%" ],
+                "size": [ 30, "100%" ],
                 "controls": [
                   {
                     "uwu": {
@@ -601,20 +556,7 @@
                       "orientation": "horizontal",
                       "controls": [
                         {
-                          "space_00": {
-                            "type": "panel",
-                            "size": [ "2%", "100%" ]
-                          }
-                        },
-                        {
-                          "panel_content_button@play_ui.panel_content_button": {            "bindings": [
-                            {
-                              "binding_type": "view",
-                              "source_control_name": "venti",
-                              "source_property_name": "#toggle_state",
-                              "target_property_name": "#visible"
-                            }
-                          ], "controls": [ { "common_back_button@neko_c.common_back_button": {}}]}
+                          "panel_content_button@play_ui.panel_content_button": {"controls": [ { "common_back_button@neko_c.common_back_button": {}}]}
                         }
                       ]
                     }
@@ -632,15 +574,15 @@
                   {
                     "dialog_title_label@settings_common.core_label": {
                       "layer": 11,
-                      "font_type": "MinecraftTen",
+                      "font_type": "EudoxusSans-Bold",
                       "color": [ 1.0, 1.0, 1.0 ],
-                      "font_scale_factor": 1.4,
+                      "font_scale_factor": 1.6,
                       "offset": [ 0, 4 ],
                       "size": [ "default" , "100%" ],
-                      "text_alignment": "center",
-                      "anchor_from": "center",
-                      "anchor_to": "center",
-                      "text": "menu.play"
+                      "text_alignment": "left",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "text": "PLAY"
                     }      
                   }
                 ]
@@ -649,7 +591,17 @@
             {
               "space_00": {
                 "type": "panel",
-                "size": [ "35.5%", "100%" ],
+                "size": "$ukuran",
+                "variables": [
+                  {
+                    "requires": "$pocket_edition",
+                    "$ukuran": [ "75.5%", "100%" ]
+                  },
+                  {
+                    "requires": "$win10_edition",
+                    "$ukuran": [ "55.5%", "100%" ]
+                  }
+                ],
                 "controls": [
                   { "neko_tab@play_ui.neko_tab": {}}
                 ]
@@ -674,7 +626,7 @@
           "type": "label",
           "color": "white",
           "size": [ "100%", "default" ],
-          "font_type": "MinecraftTen",
+          "font_type": "EudoxusSans-Bold",
           "layer": 3,
           "font_scale_factor": 1.5,
           "offset": [ 1, -0.5 ],
@@ -695,7 +647,7 @@
           "type": "label",
           "color": "white",
           "size": [ "100%", "default" ],
-          "font_type": "MinecraftTen",
+          "font_type": "EudoxusSans-Bold",
           "layer": 3,
           "font_scale_factor": 1.5,
           "offset": [ 1, -0.5 ],

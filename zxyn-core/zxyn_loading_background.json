@@ -17,7 +17,7 @@
     "type": "image", 
     "fill": true, 
     "size": [ "100%", "100%" ], 
-    "texture": "('textures/neko/loading_screen/' + $img )"
+    "texture": "('textures/neko/loading_screen/' + $img + '-min' )"
   }, 
   
   /*///// STACK PANEL /////*/
@@ -27,7 +27,7 @@
     "anchor_from": "top_left", 
     "anchor_to": "top_left", 
     "offset": "@bgl_animations.01",
-    "$duration_per_frame|default": 3,
+    "$duration_per_frame|default": 1.7,
     "controls": [
       { "i01@bgl_animations.img": { "$img": "bg_0" } },
       { "i02@bgl_animations.img": { "$img": "bg_1" } },
@@ -35,7 +35,10 @@
       { "i04@bgl_animations.img": { "$img": "bg_3" } },
       { "i05@bgl_animations.img": { "$img": "bg_4" } },
       { "i05@bgl_animations.img": { "$img": "bg_5" } },
-      { "i05@bgl_animations.img": { "$img": "bg_6" } }
+      { "i05@bgl_animations.img": { "$img": "bg_6" } },
+      { "i05@bgl_animations.img": { "$img": "bg_7" } },
+      { "i05@bgl_animations.img": { "$img": "bg_8" } },
+      { "i05@bgl_animations.img": { "$img": "bg_9" } }
     ]
   }, 
   
@@ -45,7 +48,8 @@
   "03@bgl_animations.anim_base":{"$anm_offset": [ 0, " -200% " ],"next": "@bgl_animations.04"},
   "04@bgl_animations.anim_base":{"$anm_offset": [ 0, " -300% " ],"next": "@bgl_animations.05"},
   "05@bgl_animations.anim_base":{"$anm_offset": [ 0, " -400% " ],"next": "@bgl_animations.06"},
-  "06@bgl_animations.anim_base":{"$anm_offset": [ 0, " -400% " ],"next": "@bgl_animations.07"},
-  "07@bgl_animations.anim_base":{"$anm_offset": [ 0, " -400% " ],"next": "@bgl_animations.08"},
-  "08@bgl_animations.anim_base":{"$anm_offset": [ 0, " -500% " ],"next": "@bgl_animations.01"}
+  "06@bgl_animations.anim_base":{"$anm_offset": [ 0, " -500% " ],"next": "@bgl_animations.07"},
+  "07@bgl_animations.anim_base":{"$anm_offset": [ 0, " -700% " ],"next": "@bgl_animations.08"},
+  "08@bgl_animations.anim_base":{"$anm_offset": [ 0, " -800% " ],"next": "@bgl_animations.09"},
+  "09@bgl_animations.anim_base":{"$anm_offset": [ 0, " -900% " ],"next": "@bgl_animations.01"}
 }

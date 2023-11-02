@@ -20,7 +20,7 @@
   },
 
   "first_animation@zxyn_main_ui.image_uv_animation": { "$neko_a": [ 0, 0] , "next": "@zxyn_main_ui.a_00" },
-    "a_00@zxyn_main_ui.image_uv_animation": { "$neko_a": [ 0, 200], "next": "@zxyn_main_ui.first_animation" },
+    "a_00@zxyn_main_ui.image_uv_animation": { "$neko_a": [ 0, 200], "next": "@zxyn_main_ui.a_01" },
     "a_01@zxyn_main_ui.image_uv_animation": { "$neko_a": [ 0, 400], "next": "@zxyn_main_ui.a_02" },
     "a_02@zxyn_main_ui.image_uv_animation": { "$neko_a": [ 0, 600], "next": "@zxyn_main_ui.a_03" },
     "a_03@zxyn_main_ui.image_uv_animation": { "$neko_a": [ 0, 800], "next": "@zxyn_main_ui.first_animation" },
@@ -29,7 +29,7 @@
       "type": "panel",
       "anchor_from": "top_right",
       "anchor_to": "top_right",
-      "size": [ "100%", 30 ],
+      "size": [ "100%", 40 ],
       "controls": [
         {
           "panel_event_2": {
@@ -40,7 +40,7 @@
               {
                 "panel_nya": {
                   "type": "panel",
-                  "size": [ "100%", 30 ],
+                  "size": [ "100%", 40 ],
                   "controls": [
                     {
                       "anjim@zxyn_main_ui.anjim": {}
@@ -77,9 +77,6 @@
       {
         "skin_panel@zxyn_main_ui.skin_panel_dsible": {}
       },
-      {
-        "version@neko_c.bg_2": { "alpha": 0,  "offset": [ 0, 10 ], "anchor_from": "bottom_middle", "anchor_to": "bottom_middle", "size": [ "100%c + 15px", 10 ], "controls": [ { "minecraft_and_zxynui_version@loli.minecraft_and_zxynui_version": {}}]}
-      }, 
       {
         "core_panel": {
           "type": "stack_panel",
@@ -282,11 +279,11 @@
     "size": [ 25, "100%" ]
   },
 
-  "bottom_panel": {
+  "bottom_panel_a": {
     "type": "panel",
-    "size": [ "100%" , 25 ],
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
+    "size": [ 150, 25 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
     "controls": [
       {
         "panel_a_b": {
@@ -295,30 +292,9 @@
           "size": [ "100%", "100%" ],
           "controls": [
             {
-              "spacer": { "type": "panel", "size": [ "1%", 1 ]}
-            },
-            {
-              "panel_a_left": {
-                "type": "panel",
-                "size": [ "50%", "100%" ],
-                "controls": [
-                  {
-                    "top_stack": {
-                      "type": "stack_panel",
-                      "orientation": "horizontal",
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
-                      "controls": [
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
               "panel_b_right": {
                 "type": "panel",
-                "size": [ "fill", "100%" ],
+                "size": [ "100%", "100%" ],
                 "controls": [
                   {
                     "top_stack": {
@@ -328,41 +304,7 @@
                       "anchor_to": "top_right",
                       "controls": [
                         {
-                          "content_button_panel@content_button_panel": {
-                            "controls": [
-                              {
-                                "settings_button@zxyn.settings_button": {}
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "content_button_panel@content_button_panel": {
-                            "bindings": [{ "binding_name": "#feedback_visible", "binding_name_override": "#visible" }],
-                            "controls": [
-                              {
-                                "feedback_button@zxyn.feedback_button": {}
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "content_button_panel@content_button_panel": {
-                            "bindings": [{ "binding_name": "#sign_in_visible", "binding_name_override": "#visible" }],
-                            "controls": [
-                              {
-                                "login_xbox@zxyn.login_xbox": {}
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "content_button_panel@content_button_panel": {
-                            "controls": [
-                              {
-                                "quit_button@zxyn.quit_button": {}
-                              }
-                            ]
+                          "account_button@loli.account_button": {
                           }
                         }
                       ]
@@ -370,9 +312,6 @@
                   }
                 ]
               }
-            },
-            {
-              "spacer": { "type": "panel", "size": [ "1%", 1 ]}
             }
           ]
         }
@@ -384,15 +323,15 @@
   "xbox_panel@neko_c.bg_3": {
     "layer": 2,
     "alpha": 0.35,
-    "color": [ 0.08, 0.08, 0.08 ],
-    "size": [  "100%" , "100% - 5px" ],
+    "color": [ 0.16, 0.17, 0.22 ],
+    "size": [  "100%" , "100%" ],
 
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "$warna_text": [ 1.0, 1.0, 1.0 ], //HITAM
 
-    "$panel_img_sign_size": [ 15 , "100%" ],
-    "$panel_img_not_sign_size": [ 15 , "100%" ],
+    "$panel_img_sign_size": [ 30 , "100%" ],
+    "$panel_img_not_sign_size": [ 30 , "100%" ],
 
     "$panel_text_sign_size": [ "fill" , "100%" ],
     "$panel_text__not_sign_size": [ "fill" , "100%" ],
@@ -405,14 +344,7 @@
           "size": [ "100%" , "100%" ],
           "controls": [
             {
-              "spasi": {
-                "type": "panel",
-                "size": [ 3, 3 ]
-              }
-            },
-            {
-              "panel_img_sign": {
-                "type": "panel",
+              "panel_img_sign@neko_c.bg_3": {
                 "size": "$panel_img_sign_size",
                 "bindings": [
                   {
@@ -435,8 +367,7 @@
               }
             },
             {
-              "panel_img_not_sign": {
-                "type": "panel",
+              "panel_img_not_sign@neko_c.bg_3": {
                 "size": "$panel_img_not_sign_size",
                 "bindings": [
                   {
@@ -480,7 +411,7 @@
                       "anchor_from": "left_middle",
                       "anchor_to": "left_middle",
                       "color": "$warna_text",
-                      "text": "xbox.sign_text_true",
+                      "text": "Kamu Sudah Login XBOX :D",
                       "bindings": [
                         {
                           "binding_name": "#feedback_visible",
@@ -499,7 +430,7 @@
                       "anchor_from": "left_middle",
                       "anchor_to": "left_middle",
                       "color": "$warna_text",
-                      "text": "xbox.sign_text_false",
+                      "text": "Kamu Belum Login XBOX :(",
                       "bindings": [
                         {
                           "binding_name": "#sign_in_visible",
@@ -526,6 +457,9 @@
       },
       {
         "2nd_main_ui@zxyn_main_core.2nd_main_ui": {}
+      },
+      {
+        "3nd_main_ui@zxyn_main_core.3nd_main_ui": {}
       }
     ]
   },

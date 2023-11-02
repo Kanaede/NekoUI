@@ -1,40 +1,47 @@
 {
   "namespace": "zxyn_hud",
 
-  "kordinat_player@neko_c.bg_2": {
-    "size": [ "100%c + 10px", "100%c + 5px" ],
-    "alpha": 0.5,
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
+
+
+  "kordinat_player": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -45 ],
+    "size": [ "100%c + 10px", 15 ],
     "bindings": [
       {
         "binding_name": "#player_position_visible",
-        "binding_name_override": "#visible"
+        "binding_name_override": "#visible",
+        "binding_type": "global"
       }
     ],
     "controls": [
       {
-        "player_position_text": {
-          "type": "label",
-          "text": "#text",
-          "bindings": [
+        "kordinat_player": {
+         "type": "panel",
+          "alpha": 0.5,
+          "size": [ "100%c", 15 ],
+          "controls": [
             {
-              "binding_name": "#player_position_visible",
-              "binding_name_override": "#visible",
-              "binding_type": "global"
-            },
-            {
-              "binding_name": "#player_position_text",
-              "binding_name_override": "#text",
-              "binding_condition": "always_when_visible",
-              "binding_type": "global"
+              "player_position_text": {
+                "type": "label",
+                "text": "#text",
+                "bindings": [
+                  {
+                    "binding_name": "#player_position_text",
+                    "binding_name_override": "#text",
+                    "binding_condition": "always_when_visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
             }
           ]
-        }
+        }      
       }
     ]
   },
-
   /// A
 
   "render_a": {"type": "custom","size": [ 17 , 17 ],"renderer": "inventory_item_renderer","property_bag": {"#item_id_aux": 22740992}},

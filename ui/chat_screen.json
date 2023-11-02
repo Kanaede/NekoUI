@@ -13,12 +13,13 @@
         "title_panel": {
           "type": "label",
           "size": [ "default", 25 ],
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "font_scale_factor": 1,
-          "font_type": "MinecraftTen",
+          "anchor_to": "middle_left",
+          "anchor_from": "middle_left",
+          "text_alignment": "left",
+          "font_scale_factor": 1.2,
+          "font_type": "EudoxusSans-Bold",
           "text": "#text",
-          "offset": [ 0, 5.5 ],
+          "offset": [ 0, 3],
           "color": [ 1.0, 1.0, 1.0 ],
           "layer": 10,
           "bindings": [
@@ -54,20 +55,44 @@
     ]
   },
 
-  "chat_header@neko_c.neko_header": {
+  "chat_header": {
+    "type": "panel",
     "size": [ "100%", 27 ],
+    "offset": [ 0, 1.5 ],
     "$jarak": [ 5, 5 ],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "controls": [
       {
         "title_panel": {
-          "type": "panel",
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [ "100%", 25 ],
           "controls": [
             {
-              "back_button_content_panel@chat.back_content_panel": {
-                "offset": [ 2, 0 ]
+              "left": {
+                "type": "panel",
+                "size": [ 3,3 ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ 25, "100%" ],
+                "controls": [
+                  {
+                    "common_back_button@neko_c.common_back_button": {
+                      "size": [ "100% - 3px", "100% - 3px" ],
+                      "offset": [ 2, 0 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [ 3,3 ]
               }
             },
             {
@@ -169,11 +194,11 @@
                   2
                 ],
                 "size":[
-                  "100%sm + 36px",
+                  "100%sm + 25px",
                   30
                 ],
                 "$one_line_layout":true,
-                "$option_label":"",
+                "$option_label":"MUTE",
                 "$option_binding_name":"#hide_chat",
                 "$toggle_name":"hide_chat"
               }
@@ -189,17 +214,16 @@
                 "anchor_to":"left_middle",
                 "offset":[
                   36,
-                  1
+                  5
                 ],
                 "controls":[
                   {
                     "mute_all_chat_label":{
                       "type":"label",
-                      "text":"zxyn_chat.ui.mute_all",
-                      "size":[
-                        100,
-                        "100%"
-                        ],
+                      "font_type": "EudoxusSans-Bold",
+                      "font_scale_factor": 1,
+                      "text":"",
+                      "size":[50, "100%"],
                       "text_alignment":"left",
                       "color":"$title_text_color"
                     }
@@ -297,7 +321,7 @@
     ]
   },
 
-  "chat_screen_content@neko_c.bg_2": {
+  "chat_screen_content@neko_c.bg_line": {
     "size": [ "100% - 10px", "100% - 10px" ],
     "alpha": 0.7,
     "controls": [

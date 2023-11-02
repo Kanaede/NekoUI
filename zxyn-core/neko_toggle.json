@@ -79,6 +79,45 @@
    ]
  },
 
+ "sub_neko": {
+  "type": "panel",
+  "$toggle_button_text|default": "UwU",
+  "$neko_label_offset|default": [ 1, -1.1 ],
+  "layer": 2,
+  "controls": [
+    {
+      "tab_button_text": {
+        "type": "label",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "text_alignment": "center",
+        "color": "$text_color",
+        "size": [ "100% - 5px", "default" ],
+        "max_size": [ "100% - 5px", "100% - 4px" ],
+        "font_scale_factor": 0.78,
+        "font_type": "EudoxusSans-Bold",
+        "offset": "$neko_label_offset",
+        "text": "$toggle_button_text",
+        "alpha": "$content_alpha",
+        "layer": 3,
+        "$button_text_binding_type|default": "none",
+        "$button_text_grid_collection_name|default": "",
+        "$button_text_binding_condition|default": "none",
+
+        "bindings": [
+          {
+            "binding_type": "$button_text_binding_type",
+            "binding_condition": "$button_text_binding_condition",
+            "binding_collection_name": "$button_text_grid_collection_name",
+            "binding_name": "$button_text",
+            "binding_name_override": "$button_text"
+          }
+        ]
+      }
+    }
+  ]
+ },
+
   "neko": {
    "type": "panel",
    "$icon_default_color|default": [ 1.0, 1.0, 1.0 ],

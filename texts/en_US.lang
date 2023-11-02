@@ -3,10 +3,10 @@ map.position=§bX:§f %s, §bY:§f %s, §bZ:§f %s
 
 // Main UI
 zxyn_main.ui.play=PLAY
-zxyn_main.ui.marketplace=MARKETPLACE
-zxyn_main.ui.dressingroom=DRESSING ROOM
-zxyn_main.ui.achievements=ACHIEVEMENTS
-zxyn_main.ui.settings=SETTINGS
+zxyn_main.ui.marketplace=Marketplace
+zxyn_main.ui.dressingroom=Dressing Room
+zxyn_main.ui.achievements=Achievements
+zxyn_main.ui.settings=Settings
 
 zxyn_main.ui_signin=Sign-in to Xbox
 zxyn_main.ui.feedback=Feedback
