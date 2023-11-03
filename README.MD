@@ -52,8 +52,11 @@ Creator: Han's
 Version: v.14.44 - Release
 
 > Changes can occur at any time, the texture pack owner can make any changes.
+
 > The original owner has the right to create new rules and change permits.
+
 > If you have an update for the next version, please contact Han's because I am not part of the developer.
+
 > modifying any code will be penalized and it's under original ownership, not mine
 
 ### Change Log
