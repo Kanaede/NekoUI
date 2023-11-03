@@ -1,5 +1,5 @@
 <p align="center"><img src="/pack_icon.png" alt="Logo" width="200"></p>
-<h1 align="center">NEKO UI PROJECT BY Han's<br>
+<h1 align="center">Project: NekoUI<br>
 	<a href="https://www.youtube.com/@zxyn404"><img src="https://img.shields.io/badge/Youtube-Han's404-FF0000?logo=youtube&logoColor=%23FF0000" alt="Youtube"></a>
 	<a href="https://discord.com/invite/TpMBBvGyzq"><img src="https://img.shields.io/badge/Discord-Neko_Project-5865F2?logo=discord&logoColor=5865F2" alt="Discord"></a>
     <br><br>
@@ -9,7 +9,7 @@
 
 This is just a personal edit, if you ask for the original it is on the creator's YouTube
 
-**This project belongs entirely to Han's 404 it is just a fork of the original project!**
+**This project belongs entirely to Han's it is just a fork of the original project!**
 
 You can download the original file from the Creator Youtube - ***Subscribe and Like he's videos!***
 or you can also download it by going to Creator Discord!
