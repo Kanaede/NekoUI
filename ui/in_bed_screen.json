@@ -66,6 +66,8 @@
         "wake_up_label_panel": {
           "type": "label",
           "size": [ "default", 49 ],
+          "font_type": "EudoxusSans-Bold",
+          "font_scale_factor": 0.86,
           "offset": [ 0, "3.5%" ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -105,6 +107,7 @@
                               {
                                 "wake_up@death.panel_button": { "controls": [ { "wake_up_neko@bed.wake_up_neko": {}}]}
                               },
+                              { "jarak": { "type": "panel", "size": [ 5, 5 ]}},
                               {
                                 "chat@death.panel_button": { "controls": [ { "chat_neko@bed.chat_neko": {}}]}
                               }

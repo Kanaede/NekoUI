@@ -9,13 +9,23 @@
     "focus_change_up": "button.menu_quit",
     "$focus_override_right": "rage_quit_a"
   },
+
+  "settings_button_a@common_buttons.light_text_button": {
+    "size": [ "100% - 5px", "100% - 5px" ],
+    "$pressed_button_name": "button.menu_settings",
+    "$button_text": "menu.settings",
+    "$button_focus_precedence": 1,
+    "focus_change_up": "button.menu_quit",
+    "focus_change_down": "button.menu_continue",
+    "$focus_override_right": "return_to_game_button_a"
+  },
   
   "rage_quit_a@common_buttons.light_text_button": {
     "size": [ "100% - 5px", "100% - 5px" ],
     "$pressed_button_name": "button.menu_quit",
     "$button_text": "pauseScreen.quit",
     "focus_change_down": "button.menu_continue",
-    "$focus_override_right": "return_to_game_button_a",
+    "$focus_override_right": "settings_button_a",
     "variables": [
       {
         "requires": "$is_secondary_client",
@@ -118,9 +128,6 @@
           "controls": [
             {
               "button_content_panel_0@button_content_panel": { "controls": [ {"ganyu@test_toggle.yaemiko": { "$button_text_default": "","$button_text_hover": "","$button_text_pressed": "", "$icon_texture": "textures/neko/main_icon/menu_pause", "$icon_size": [ 14, 14 ], "$default_border_visible": true, "size": [ "100% - 5px", "100% - 5px" ],"$button_content": "pause.checked","$toggle_view_binding_name": "main_pause_uwu"}}]}
-            },
-            {
-              "button_content_panel_7@button_content_panel": { "controls": [ { "settings_button_p@zxyn.settings_button_p": {}}]}
             }
           ]
         }
@@ -197,14 +204,17 @@
                       "orientation": "horizontal",
                       "size": [ "100%", "100%" ],
                       "controls": [
-                        { "spacer_right": { "type": "panel", "size": [ "25%", "100%" ]}},
+                        { "spacer_right": { "type": "panel", "size": [ "20%", "100%" ]}},
                         {
                           "resume_panel": { "type": "panel", "size": [ "fill", "100%"], "controls": [{"return_to_game_button_a@zxyn_pause.return_to_game_button_a": {}}]}
                         },
                         {
+                          "settings": { "type": "panel", "size": [ "fill", "100%"], "controls": [{"settings_button_a@zxyn_pause.settings_button_a": {}}]}
+                        },
+                        {
                           "quit_panel": { "type": "panel", "size": [ "fill", "100%"], "controls": [{"rage_quit_a@zxyn_pause.rage_quit_a": {}}]}
                         },
-                        { "spacer_right": { "type": "panel", "size": [ "25%", "100%" ]}}
+                        { "spacer_right": { "type": "panel", "size": [ "20%", "100%" ]}}
                       ]
                     }
                   }

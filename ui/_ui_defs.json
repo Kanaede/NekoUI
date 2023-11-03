@@ -4,6 +4,7 @@
 
     // A CUSTOM
 
+    "zxyn-core/neko_play_screen_common.json",  
     "zxyn-core/mainui/zxyn_main_ui.json",
     "zxyn-core/mainui/zxyn_main_ui_core.json",
     "zxyn-core/mainui/zxyn_ui_new.json",

@@ -320,6 +320,18 @@
     ]
   },
 
+  "top_tab@common_tabs.tab_top": {
+    "$anims|default": [],
+    "anims": "$anims",
+    "offset": 0,
+    "$offset|default": 0,
+    "alpha": "$offset",
+    "$toggle_focus_enabled": false,
+    "$toggle_name": "navigation_tab",
+    "$toggle_group_default_selected": "$construction_index", //Construction tab
+    "$tab_content": "crafting.empty_tab_panel",
+    "$allow_controller_back_button_mapping": "$is_ps4"
+  },
 
   "tab_wait_anim": {
     "anim_type": "wait",
@@ -336,11 +348,45 @@
     "duration": 0.5
   },
 
+  "panel_tab_c": {
+    "type": "panel",
+    "size": [ "100%", "fill" ],
+    "controls": [
+      {
+        "label": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "label": {
+               "layer": 2,
+               "offset": [ 1, 1.4 ],
+                "type": "label",
+                "text": "?",
+                "font_size": "large"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stack@neko_c.bg_3": {
+          "layer": 1,
+          "color": [ 0.16, 0.17, 0.22 ],
+          "size": [ "100%", "100%" ],
+          "controls": "$neko_controls",
+          "$neko_controls|default": []
+        }
+      }
+    ]
+  },
+  
+
   "tab_navigation_panel_layout": {
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100%", 30 ],
-    "$ukuran_tab": [ "100%", "fill" ],
+  //  "$ukuran_tab": [ "100%", "fill" ],
     "$jarak_antara_tab": [ "100%", "5%" ],
     "$jarak_antara_tab_a": [ "100%", "1.5%" ],
 
@@ -363,13 +409,26 @@
                 "anchor_from": "top_left",
                 "controls": [
                   { "padding_01": { "type": "panel", "size": "$jarak_antara_tab" }},
-                  { "construction_tab_panel": {"type": "panel","size": "$ukuran_tab","$is_left_most_tab": true,"controls": [{"construction_tab_factory": {"type": "factory","control_ids": {"construction_tab": "@crafting.construction_tab"}}}]}},
+
+                  { "construction_tab_panel@crafting.panel_tab_c": { "$is_left_most_tab": true, "$neko_controls": [ { "construction_tab_factory": {"type": "factory","control_ids": {"construction_tab": "@crafting.construction_tab"}}}]}},
+
+              //    { "construction_tab_panel": {"type": "panel","size": "$ukuran_tab","controls": [{"construction_tab_factory": {"type": "factory","control_ids": {"construction_tab": "@crafting.construction_tab"}}}]}},
+
                   { "spacer_0": { "type": "panel", "size": "$jarak_antara_tab_a" }},
-                  { "equipment_tab_panel": {"type": "panel","size": "$ukuran_tab", "controls": [{"equipment_tab_factory": {"type": "factory","control_ids": {"equipment_tab": "@crafting.equipment_tab"}}}]}},
+
+                  { "equipment_tab_panel@crafting.panel_tab_c": { "$neko_controls": [ {"equipment_tab_factory": {"type": "factory","control_ids": {"equipment_tab": "@crafting.equipment_tab"}}}]}},
+              //    { "equipment_tab_panel": {"type": "panel","size": "$ukuran_tab", "controls": [{"equipment_tab_factory": {"type": "factory","control_ids": {"equipment_tab": "@crafting.equipment_tab"}}}]}},
+
                   { "spacer_1": { "type": "panel", "size": "$jarak_antara_tab_a" }},
-                  { "items_tab_panel": {"type": "panel","size": "$ukuran_tab", "controls": [{"items_tab_factory": {"type": "factory","control_ids": {"items_tab": "@crafting.items_tab"}}}]}},
+
+                  { "items_tab_panel@crafting.panel_tab_c": { "$neko_controls": [ {"items_tab_factory": {"type": "factory","control_ids": {"items_tab": "@crafting.items_tab"}}}]}},
+              //    { "items_tab_panel": {"type": "panel","size": "$ukuran_tab", "controls": [{"items_tab_factory": {"type": "factory","control_ids": {"items_tab": "@crafting.items_tab"}}}]}},
+
                   { "spacer_2": { "type": "panel", "size": "$jarak_antara_tab_a" }},
-                  { "nature_tab_panel": {"type": "panel","size": "$ukuran_tab", "controls": [{"nature_tab_factory": {"type": "factory","control_ids": {"nature_tab": "@crafting.nature_tab"}}}]}},
+
+                  { "nature_tab_panel@crafting.panel_tab_c": { "$neko_controls": [ {"nature_tab_factory": {"type": "factory","control_ids": {"nature_tab": "@crafting.nature_tab"}}}]}},
+             //     { "nature_tab_panel": {"type": "panel","size": "$ukuran_tab", "controls": [{"nature_tab_factory": {"type": "factory","control_ids": {"nature_tab": "@crafting.nature_tab"}}}]}},
+
                   { "padding_02": { "type": "panel", "size": "$jarak_antara_tab" }}
                 ]
               }

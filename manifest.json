@@ -4,15 +4,15 @@
         "description": "§lFirst use please restart the game!\nYoutube: @zxyn404 ( Han's )",
         "name": "§lNEKO§b PROJECTS§b",
         "uuid": "07a2abc0-8a76-46e1-85d2-8813f0f9bf6e",
-        "version": [13, 0, 1],
-        "min_engine_version": [1, 20, 10]
+        "version": [14, 0, 4],
+        "min_engine_version": [1, 20, 31]
     },
     "modules": [
         {
             "description": "§lFirst use please restart the game!\nYoutube: @zxyn404 ( Han's )",
             "type": "resources",
             "uuid": "e79e7d77-3a0b-482e-a7b1-d956a8679041",
-            "version": [13, 0, 1]
+            "version": [14, 0, 4]
         }
     ]
 }

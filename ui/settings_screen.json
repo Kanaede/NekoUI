@@ -11,16 +11,10 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "orientation": "vertical",
-    "$ukuran_jarak": [ 5, 5 ],
-    "$default_selector_toggle_index": 1,
+    "$ukuran_jarak": [ 0, 0 ],
+    "$default_selector_toggle_index": 5555,
     "ttsSectionContainer": true,
     "controls": [
-      {
-        "account_uwu@general_section.account_uwu": {
-          "ignored": "(not $include_controls_and_settings_sections or not $is_pregame)",
-          "$toggle_group_forced_index": 1
-        }
-      },
       { "spacer_banana": { "type": "panel", "size": "$ukuran_jarak","ignored": "(not $include_controls_and_settings_sections or not $is_pregame)"}},
       {
         "quick_panel": {
@@ -36,18 +30,8 @@
                   "orientation": "vertical",
                   "controls": [
                     {
-                      "selector_group_label_2@settings_common.selector_group_label": {
-                        "$yuki": "settings.header.quick_settings"
-                      }
-                    },
-                    {
                       "quick_settings@custom_settings_section.quick_settings": {
                         "$toggle_group_forced_index": 5555
-                      }
-                    },
-                    {
-                      "accessibility_button@general_section.accessibility_button": {
-                        "$toggle_group_forced_index": 5556
                       }
                     }
                   ]
@@ -76,19 +60,8 @@
                   "orientation": "vertical",
                   "controls": [
                     {
-                      "selector_group_label_2@settings_common.selector_group_label": {
-                        "$yuki": "settings.header.graphics_and_gameplay"
-                      }
-                    },
-                    {
                       "graphic_button@custom_settings_section.graphic_button": {
                         "$toggle_group_forced_index": 3000
-                      }
-                    },
-                    {
-                      "video_button@general_section.video_button": {
-                        "$toggle_group_forced_index": "$video_forced_index",
-                        "$tts_section_header": "$general_section_header"
                       }
                     },
                     {
@@ -117,12 +90,6 @@
                     "size": [ "100%", "100%c" ],
                     "orientation": "vertical",
                     "controls": [
-                      {
-                        "selector_group_label_2@settings_common.selector_group_label": {
-                          "$warna": [ 0.0 , 0.0 , 0.0] ,
-                          "$yuki": "settings.header.controls_settings"
-                        }
-                      },
                       {
                         "keyboard_and_mouse_button@controls_section.keyboard_and_mouse_button": {
                           "ignored": "(not $keyboard_and_mouse_supported)",
@@ -180,36 +147,6 @@
           "$subscription_toggle_index": "$subscription_forced_index",
           "$backup_toggle_index": "$backup_forced_index",
           "$dev_options_toggle_index": "$dev_options_forced_index"
-        }
-      },
-      {
-        "rs": {
-          "type": "stack_panel",
-          "size": [ "100% - 3px", "100%c" ],
-          "controls": [
-            {
-              "selector_group_label_11@settings_common.selector_group_label": {
-                "$warna": [ 0.0 , 0.0 , 0.0] ,
-                "ignored": "(not $include_controls_and_settings_sections or not $is_pregame)",
-                "$yuki": "yuki.resource_packs.text"
-              }
-            },
-            {
-              "global_texture_pack_button@general_section.global_texture_pack_button": {
-                "ignored": "(not $include_controls_and_settings_sections or not $is_pregame)",
-                "$toggle_group_forced_index": "$global_texture_pack_forced_index",
-                "visible": "($is_global_texture_packs_visible)",
-                "$tts_section_header": "$general_section_header"
-              }
-            },
-            {
-              "addons_selector_panel@world_section.addons_selector_panel": {
-                "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))",
-                "$level_texture_pack_toggle_index": "$level_texture_pack_index",
-                "$addon_toggle_index": "$addon_index"
-              }
-            }
-          ] 
         }
       }
     ]

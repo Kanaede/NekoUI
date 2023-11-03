@@ -3,6 +3,21 @@
     "fonts" : [
       {
         "font_format": "ttf",
+        "font_name": "EudoxusSans-Bold",
+        "version": 1,
+        "font_file": "font/EudoxusSans-Bold",
+        "lowPerformanceCompatible": false
+      },
+      {
+        "font_format": "ttf",
+        "font_name": "EudoxusSans-Medium",
+        "version": 1,
+        "font_file": "font/EudoxusSans-Medium",
+        "lowPerformanceCompatible": false
+      },
+      ///////////////////////////
+      {
+        "font_format": "ttf",
         "font_name": "MinecraftTen",
         "version": 1,
         "font_file": "font/minecraft-ten",

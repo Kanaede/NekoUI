@@ -2,14 +2,69 @@
 {
   "namespace": "bg_animations", 
   "core": {"type": "image","fill": true, "bilinear": true},
-  "bg_play@core": { "texture": ".zxyn-ui-core/uwu/bg_playscreen"},
-  "bg_settings@core": {"alpha": 0.4,"texture": "textures/nekoui/uwu/bg_settings"},
+  "bg_play@core": { "texture": "zxyn-core/mainui/bg_playscreen"},
+  "bg_settings@core": {"texture": "zxyn-core/mainui/bg_settings"},
+
+  "blur_a": {"type": "image","alpha": "@alpha_uwu", "texture": "ui/neko/uwu/blur", "fill": true, "bilinear": true},
+  "blur_b": {"type": "image","alpha": "@alpha_uwu_2", "texture": "ui/neko/uwu/blur", "fill": true, "bilinear": true},
+  "blur_c": {"type": "image","alpha": "@alpha_uwu_2", "texture": "ui/neko/uwu/notice", "fill": true, "bilinear": true},
 
   "core_bg": {
     "type": "panel",
     "controls": [
       {
-        "bg_anim@bg_anim": {}
+        "panel_a": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "yaemiko",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "bg_anim@bg_anim": {}
+            }
+          ]
+        }
+      },
+      {
+        "panel_b": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "venti",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "bg_play@bg_play": {}
+            }
+          ]
+        }
+      },
+      {
+        "panel_d": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "raiden",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "blur_c@blur_c": {}
+            }
+          ]
+        }
       }
     ]
   },
@@ -39,7 +94,7 @@
     "anchor_from": "top_left", 
     "anchor_to": "top_left", 
     "offset": "@bg_animations.01",
-    "$duration_per_frame|default": 0.1,
+    "$duration_per_frame|default": 0.09,
     "controls": [
       { "i01@bg_animations.img": { "$img": "ezgif-frame-001" } },
       { "i02@bg_animations.img": { "$img": "ezgif-frame-002" } },
@@ -248,7 +303,7 @@
   "92@bg_animations.anim_base":{"$anm_offset": [ 0, " -9100% " ],"next": "@bg_animations.93"},
   "93@bg_animations.anim_base":{"$anm_offset": [ 0, " -9200% " ],"next": "@bg_animations.94"},
   "94@bg_animations.anim_base":{"$anm_offset": [ 0, " -9300% " ],"next": "@bg_animations.95"},
-  "95@bg_animations.anim_base":{"$anm_offset": [ 0, " -9400% " ],"next": "@bg_animations.96"},
+  "95@bg_animations.anim_base":{"$anm_offset": [ 0, " -9400% " ],"next": "@bg_animations.01"},
   "96@bg_animations.anim_base":{"$anm_offset": [ 0, " -9500% " ],"next": "@bg_animations.97"},
   "97@bg_animations.anim_base":{"$anm_offset": [ 0, " -9600% " ],"next": "@bg_animations.98"},
   "98@bg_animations.anim_base":{"$anm_offset": [ 0, " -9700% " ],"next": "@bg_animations.99"},
